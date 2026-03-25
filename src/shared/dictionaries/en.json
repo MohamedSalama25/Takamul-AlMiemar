@@ -1,0 +1,408 @@
+{
+    "nav": {
+        "title": "Takamul AlMiemar",
+        "about": "About",
+        "services": "Services",
+        "projects": "Projects",
+        "clients": "Clients",
+        "contact": "Contact"
+    },
+    "hero": {
+        "subtitle": "Takamul AlMiemar / تكامل المعمار",
+        "title1": "Engineering Excellence.",
+        "title2": "Reliable Execution.",
+        "title3": "Premium Delivery.",
+        "description": "Setting the gold standard in construction and multi-discipline engineering across the Kingdom of Saudi Arabia since 2010.",
+        "ctaProjects": "View Projects",
+        "ctaContact": "Contact Us"
+    },
+    "about": {
+        "badge": "Our Legacy",
+        "title": "Architects of Structural Integrity",
+        "p1": "Founded in",
+        "p1Bold": "2010",
+        "p1Rest": ", Takamul AlMiemar has established itself as a premier name in the Saudi Arabian construction landscape.",
+        "p2": "Headquartered in Riyadh, our operations span across the Kingdom, delivering high-precision engineering solutions that meet the most demanding international standards.",
+        "p3": "Our multi-discipline approach ensures seamless integration between structural, electrical, and mechanical systems, providing our clients with a unified path from blueprint to reality.",
+        "stat1": "14+",
+        "stat1Text": "Years of Heritage",
+        "stat2": "KSA",
+        "stat2Text": "Nationwide Reach",
+        "certificate": "ISO Certified\nStandards"
+    },
+    "services": {
+        "title": "Precision Services",
+        "items": [
+            {
+                "icon": "foundation",
+                "title": "General Contracting",
+                "desc": "End-to-end management of large-scale infrastructure and architectural projects with precision."
+            },
+            {
+                "icon": "bolt",
+                "title": "Electrical Systems",
+                "desc": "High-voltage installations, power distribution, and smart grid integration for modern facilities."
+            },
+            {
+                "icon": "settings_input_component",
+                "title": "Mechanical Works",
+                "desc": "Industrial machinery installation and complex mechanical infrastructure engineering."
+            },
+            {
+                "icon": "ac_unit",
+                "title": "HVAC Systems",
+                "desc": "Optimized climate control solutions for commercial towers and industrial warehouses."
+            },
+            {
+                "icon": "fire_extinguisher",
+                "title": "Firefighting Systems",
+                "desc": "Advanced suppression and detection systems compliant with international safety codes."
+            },
+            {
+                "icon": "precision_manufacturing",
+                "title": "Metal Works",
+                "desc": "Custom structural steel fabrication and ornamental metal craftsmanship."
+            },
+            {
+                "icon": "format_paint",
+                "title": "Finishing Works",
+                "desc": "Premium interior and exterior finishes that define architectural character."
+            },
+            {
+                "icon": "engineering",
+                "title": "MEP Systems",
+                "desc": "Integrated Mechanical, Electrical, and Plumbing engineering excellence."
+            }
+        ]
+    },
+    "ourServicesPage": {
+        "hero": {
+            "badge": "Our Expertise / خبراتنا",
+            "title": "Integrated Engineering Solutions for",
+            "titleAccent": "Iconic Landmarks",
+            "description": "Integrated engineering solutions for iconic landmarks that combine technical precision with world-class standards"
+        },
+        "approach": {
+            "title": "Our Methodical Approach",
+            "subtitle": "How we turn blueprints into reality with precision and professionalism",
+            "steps": [
+                {
+                    "title": "Consulting",
+                    "desc": "Discovery & Planning",
+                    "icon": "forum"
+                },
+                {
+                    "title": "Design",
+                    "desc": "Technical Engineering",
+                    "icon": "draw"
+                },
+                {
+                    "title": "Execution",
+                    "desc": "Precision Build",
+                    "icon": "construction"
+                },
+                {
+                    "title": "Handover",
+                    "desc": "Quality Assurance",
+                    "icon": "key"
+                }
+            ]
+        },
+        "integration": {
+            "title": "Total Solutions Integration",
+            "subtitle": "Comprehensive solutions integration for mega-projects",
+            "description": "Our strength lies in the seamless integration of all specialized engineering sectors. By unifying contracting, MEP, and industrial services under one management, we deliver multi-billion dollar turnkey projects with unprecedented efficiency and technical synergy.",
+            "badges": [
+                "Turnkey Delivery",
+                "Unified Management"
+            ]
+        },
+        "cta": {
+            "title": "Ready to build the future?",
+            "subtitle": "Consult our experts to turn your vision into an engineering reality",
+            "button": "Consult Our Experts / استشر خبراءنا"
+        }
+    },
+    "portfolioPage": {
+        "hero": {
+            "badge": "Portfolio",
+            "title": "Our Portfolio",
+            "subtitle": "Architecture of Integrity, Engineering of Excellence",
+            "description": "Showcasing a curated selection of landmarks that demonstrate our commitment to structural precision and architectural beauty"
+        },
+        "filters": {
+            "all": "All",
+            "industrial": "Industrial",
+            "mep": "MEP",
+            "commercial": "Commercial",
+            "residential": "Residential"
+        },
+        "cta": {
+            "title": "Build Your Masterpiece",
+            "subtitle": "Partner with us to transform your vision into an architectural reality built with precision and integrity.",
+            "button": "Start a Consultation"
+        },
+        "projects": [
+            {
+                "title": "The Al-Riyadh Atrium",
+                "category": "Commercial",
+                "location": "Riyadh, KSA",
+                "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuARaq5OddyMb1IUpWe6RDoRWV6Kf65IIrfEj1Fh42wFCTCeTS5TRPiWQcIL6GqyUQ_Usfq7yJk7lbqveEAeHt3p-Hz_i_Hzb5Wy-wFIfu_OCs_uXkvXmmCzFAXndBAY8Lwv9c9nEnB78LTfFV_FF1uN0tMEm-NBPVTfqoKYyBhySz02XCeHefLK-3uXCzA7n5uye3z5PK2DD3Dwz1qTr-XoxR7PWN9hh6eq2_Y1AfO5BUEiazEy07cUdemaIXhd98RTBH7CEeD62gXz"
+            },
+            {
+                "title": "Desert Oasis Villa",
+                "category": "Residential",
+                "location": "Jeddah, KSA",
+                "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB7w_Xroai-e0uLE_Q8Q8Yc6eb6LdNVhCejI6sHm2U632_7hJeEe8WNV_TZpdhjWMPuDJttzMxx0HioFC_KuBuDkqBX7CkedPBrVjbiuBMHnEOmIAPKlKiOBUU3yp-IUcKllm077SSRQ5kc7A1WNG-Jey5IFwmLx0jzKGLbcqQqZudPBUdd166HLIy4kJvgyrd3nLVdIcqICThNFzq6jURAUw11dLf0wtkKwn3x9qORtxY5UYu1Q6A5AoITscU3vYQLaOzuJTmwGT4V"
+            },
+            {
+                "title": "Petro-Industrial Complex",
+                "category": "Industrial",
+                "location": "Jubail, KSA",
+                "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBoeztvyQm_AAk4QDs60RSiHm3PleXzp3NhIi4qsfPqNt4oHhjZqgLe0fhAJMLErZ9Z0br56sIYpxVyTxZ6WIxylKtBTQ1Ne6KTlVO9hU4E7bqNIpV0iJYL9rx1ufLEPmyvSbxcubWfRW593JvnVgbTVt76sVn1wqD0Ycjb256yxCYkonIqgJxyvnHOTwzbXQppK78Fb0FRf9FnnyDlMYIRFyV5RHyKE1JUZHEFTmMf8poz6wTvsaDcbPKxrB1tZaHmzSJ-3yrLkW9V"
+            },
+            {
+                "title": "National Data Center MEP",
+                "category": "MEP",
+                "location": "NEOM, KSA",
+                "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDScLdCTka6HXfeNTfuVgYG_k-iBgqKX-Ofi1_IIMYMgcwjuzOgaf-yWVJuQvAkj2Hr_F0W4hUBdIttRFpTFMbIELfinDOpAue2bc6IRn8DS8yYFAQwVQ7MAQ4WUhfQ5MYx3R6bOHILwgIl_EH0mqs1CpQ3UFNT1w6BWYWdIPpWE-1lsB11uB20-OIvE1OM-_yUAYs5SDT9bOWvgZzU5D2PKejENBnCfuksZGyY8pnVeSbFB2G-40o0r-q1O3Ty8YyrVp_3JiDDBqJZ"
+            }
+        ]
+    },
+    "aboutPage": {
+        "hero": {
+            "badge": "Since 2010",
+            "title": "Architects of Structural",
+            "titleAccent": "Integrity",
+            "subtitle": "Takamul AlMiemar: Leaders in engineering and construction since 2010, shaping the future of infrastructure with the highest standards of precision and quality."
+        },
+        "story": {
+            "badge": "The Legacy",
+            "title": "Our Story",
+            "p1": "Founded in 2010, Takamul AlMiemar began with a singular vision: to redefine structural excellence in the region.",
+            "p2": "Our journey began in 2010 with a clear vision to redefine construction excellence, and today we are proud to be a multi-billion riyal engineering landmark.",
+            "timeline": [
+                {
+                    "year": "2010",
+                    "title": "The Foundation",
+                    "desc": "Established as a specialized engineering consultancy with a focus on high-precision structural integrity and boutique architectural projects."
+                },
+                {
+                    "year": "2015",
+                    "title": "Scaling Horizons",
+                    "desc": "Transitioned into full-scale EPC contracting, securing landmark government infrastructure projects across the Kingdom."
+                },
+                {
+                    "year": "2024",
+                    "title": "A Global Standard",
+                    "desc": "Recognized as a multi-billion dollar engineering firm leading in innovation, safety, and sustainable construction practices."
+                }
+            ]
+        },
+        "mission": {
+            "badge": "Mission",
+            "title": "To Engineer Tomorrow's Landmarks",
+            "desc": "Transforming complex challenges into architectural triumphs through unmatched technical rigor."
+        },
+        "vision": {
+            "badge": "Vision",
+            "title": "The Regional Benchmark",
+            "desc": "To be the first regional benchmark in engineering quality and construction safety, contributing to a sustainable economy."
+        },
+        "values": {
+            "badge": "Our DNA",
+            "title": "Core Values",
+            "items": [
+                {
+                    "icon": "gavel",
+                    "title": "Integrity",
+                    "subtitle": "النزاهة",
+                    "desc": "Honesty and transparency are the foundations of every structure we build."
+                },
+                {
+                    "icon": "architecture",
+                    "title": "Precision",
+                    "subtitle": "الدقة",
+                    "desc": "Micro-level detail management ensures macro-level structural safety."
+                },
+                {
+                    "icon": "lightbulb",
+                    "title": "Innovation",
+                    "subtitle": "الابتكار",
+                    "desc": "Integrating BIM and AI into traditional engineering workflows."
+                },
+                {
+                    "icon": "health_and_safety",
+                    "title": "Safety",
+                    "subtitle": "السلامة",
+                    "desc": "A zero-accident culture is our ultimate project deliverable."
+                }
+            ]
+        },
+        "leadership": {
+            "badge": "Board of Directors",
+            "title": "Executive Leadership",
+            "subtitle": "القيادة التنفيذية ومجلس الإدارة",
+            "members": [
+                {
+                    "name": "Ahmed Al-Miemar",
+                    "role": "Chairman & CEO",
+                    "experience": "25 Years Experience",
+                    "desc": "Visionary leader with a focus on national infrastructure growth and strategic engineering excellence."
+                },
+                {
+                    "name": "Dr. Sarah Khalid",
+                    "role": "Chief Technical Officer",
+                    "experience": "Structural PhD",
+                    "desc": "Leading our R&D and digital construction initiatives, integrating BIM and structural AI."
+                },
+                {
+                    "name": "Omar Mansour",
+                    "role": "Operations Director",
+                    "experience": "EPC Expert",
+                    "desc": "Overseeing large-scale logistics and project management workflows across all regional sites."
+                }
+            ]
+        }
+    },
+    "contactPage": {
+        "hero": {
+            "badge": "The Architectural Blueprint",
+            "title": "Contact Us",
+            "description": "Initiate a dialogue with our engineering leads to transform your architectural vision into a structural masterpiece."
+        },
+        "form": {
+            "title": "Project Inquiry",
+            "subtitle": "Initiate a dialogue with our engineering leads to transform your architectural vision into a structural masterpiece.",
+            "name": "Full Name",
+            "namePlaceholder": "E.g. Khalid Al-Saud",
+            "email": "Email Address",
+            "emailPlaceholder": "name@company.com.sa",
+            "service": "Service Type",
+            "serviceOptions": [
+                "Industrial Engineering",
+                "Infrastructure Development",
+                "Sustainable Architecture",
+                "Project Management"
+            ],
+            "region": "Region",
+            "regionOptions": [
+                "Riyadh (HQ)",
+                "Jeddah",
+                "Jubail"
+            ],
+            "message": "Technical Brief",
+            "messagePlaceholder": "Provide a high-level overview of your requirements...",
+            "submit": "Submit Consultation Request"
+        },
+        "info": {
+            "hq": "Headquarters",
+            "hqAddress": "King Fahd Road, Al Olaya District, Riyadh 12211, Saudi Arabia",
+            "inquiries": "Inquiries",
+            "email": "Email",
+            "emailValue": "projects@takamul.com.sa"
+        },
+        "hubs": {
+            "jeddah": "Jeddah Division",
+            "jeddahDesc": "Western Region Logistics",
+            "jubail": "Jubail Industrial",
+            "jubailDesc": "Industrial Engineering Hub"
+        },
+        "partner": {
+            "title": "Partner With Us",
+            "desc": "Our procurement and HR teams are always seeking visionary partners and elite engineering talent to join our legacy of architectural excellence.",
+            "careers": "Careers & Talent",
+            "vendor": "Vendor Prequalification"
+        }
+    },
+    "projects": {
+        "badge": "Portfolio",
+        "title": "Defining the Skyline",
+        "filterAll": "All",
+        "filterIndustrial": "Industrial",
+        "filterCommercial": "Commercial",
+        "filterResidential": "Residential",
+        "p1Type": "Commercial Elite",
+        "p1Title": "Riyadh Financial Plaza",
+        "p1Info": [
+            "Area: 45,000 sq ft",
+            "Date: 2023",
+            "Status: Completed"
+        ],
+        "p2Type": "Industrial",
+        "p2Title": "Global Logistics Hub",
+        "p2Info": [
+            "Area: 120,000 sq ft",
+            "Type: MEP Integration"
+        ],
+        "p3Type": "Residential",
+        "p3Title": "The Al-Majd Villa",
+        "p4Type": "Public Infrastructure",
+        "p4Title": "National Convention Arena",
+        "p4Info": [
+            "Structural Excellence",
+            "Role: Prime Contractor"
+        ]
+    },
+    "statistics": {
+        "s1Num": "14+",
+        "s1Text": "Years Experience",
+        "s2Num": "250+",
+        "s2Text": "Projects Delivered",
+        "s3Num": "85+",
+        "s3Text": "Corporate Clients",
+        "s4Num": "8",
+        "s4Text": "Specialized Divisions"
+    },
+    "clients": {
+        "badge": "Strategic Partners & Trusted Clients"
+    },
+    "certifications": {
+        "title": "Uncompromising Standards",
+        "badge": "Quality & Safety",
+        "c1Badge": "ISO 9001:2015",
+        "c1Desc": "Quality Management Systems certifying our commitment to organizational excellence and client satisfaction.",
+        "c2Badge": "ISO 45001:2018",
+        "c2Desc": "Occupational Health & Safety ensuring the highest welfare standards for our global workforce.",
+        "c3Badge": "ISO 14001:2015",
+        "c3Desc": "Environmental Management dedicated to sustainable construction and minimal ecological impact."
+    },
+    "contact": {
+        "title": "Start Your Next Landmark Project",
+        "desc": "Discuss your engineering requirements with our specialists. We are ready to execute your vision with precision and structural excellence.",
+        "info1Title": "Headquarters",
+        "info1Desc": "King Fahd Road, Al Olaya District, Riyadh 12211, Saudi Arabia",
+        "info2Title": "Direct Inquiry",
+        "info2Desc": "+966 11 000 0000 | +966 50 000 0000",
+        "info3Title": "Digital Correspondence",
+        "info3Desc": "info@takamul-miemar.com.sa",
+        "formName": "Full Name",
+        "formEmail": "Email Address",
+        "formType": "Project Type (e.g., MEP, Industrial, Finishing)",
+        "formMessage": "Briefly describe your project requirements",
+        "formSubmit": "Request a Consultation"
+    },
+    "footer": {
+        "title": "Takamul AlMiemar",
+        "desc": "Leading the construction evolution in Saudi Arabia with integrity, innovation, and unrivaled engineering precision.",
+        "navTitle": "Navigation",
+        "navLinks": [
+            "About Us",
+            "Our Services",
+            "Project Portfolio",
+            "Client Testimonials",
+            "Careers"
+        ],
+        "resourcesTitle": "Resources",
+        "resourcesLinks": [
+            "Privacy Policy",
+            "Terms of Service",
+            "Engineering Standards",
+            "Quality Control"
+        ],
+        "newsletterTitle": "Newsletter",
+        "newsletterDesc": "Stay updated with our latest landmarks.",
+        "newsletterPlaceholder": "Email",
+        "copyright": "© 2024 Takamul AlMiemar. Architectural Excellence."
+    }
+}
