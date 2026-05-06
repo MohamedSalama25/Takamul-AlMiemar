@@ -1,6 +1,35 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, animate, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+function AnimatedCounter({ value }: { value: string }) {
+    const ref = useRef<HTMLSpanElement | null>(null);
+    const isInView = useInView(ref, { once: true, margin: "-80px" });
+    const [count, setCount] = useState(0);
+
+    const numericValue = parseInt(value.replace(/[^\d]/g, ""), 10) || 0;
+    const suffix = value.replace(/[\d]/g, "");
+
+    useEffect(() => {
+        if (!isInView) return;
+
+        const controls = animate(0, numericValue, {
+            duration: 1.5,
+            ease: "easeOut",
+            onUpdate: (latest) => setCount(Math.round(latest)),
+        });
+
+        return () => controls.stop();
+    }, [isInView, numericValue]);
+
+    return (
+        <span ref={ref} className="text-5xl font-extrabold text-tertiary drop-shadow-[0_0_10px_rgba(234,195,74,0.3)] block">
+            {count}
+            {suffix}
+        </span>
+    );
+}
 
 export default function Statistics({ dict }: { dict: any }) {
     const container = {
@@ -34,9 +63,7 @@ export default function Statistics({ dict }: { dict: any }) {
                     { num: dict.s4Num, text: dict.s4Text }
                 ].map((stat, idx) => (
                     <motion.div key={idx} variants={item} className="space-y-2">
-                        <span className="text-5xl font-extrabold text-tertiary drop-shadow-[0_0_10px_rgba(234,195,74,0.3)] block">
-                            {stat.num}
-                        </span>
+                        <AnimatedCounter value={stat.num} />
                         <p className="text-on-surface-variant text-xs font-bold tracking-widest uppercase">{stat.text}</p>
                     </motion.div>
                 ))}

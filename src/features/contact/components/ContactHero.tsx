@@ -5,25 +5,25 @@ import Image from "next/image";
 
 export default function ContactHero({ dict }: { dict: any }) {
     return (
-        <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-surface-variant to-background z-0"></div>
-            <div className="absolute inset-0 z-0 opacity-40 overflow-hidden">
+        <section className="relative h-[500px] flex items-center justify-center overflow-hidden bg-background">
+            <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/45 via-black/35 to-black/55" aria-hidden />
+            <div className="absolute inset-0 z-0 overflow-hidden">
                 <Image
                     fill
-                    className="object-cover grayscale mix-blend-overlay"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3So6BjjC9xZjD9Vf0hPXBFPyGAFJ5Kh7F2jM0683alUMYXoq5zfG46PNdTrSee_m-dbbnzBiyZxjypyhz60RUEQ0hs0qPwmxcu2gRIYySZoeEVoHheU5CieZZzbQjcfK_6jXE0uHB-aGiu9mmUf780BWD3_H4Ai8iKKHh6Yz8C5WNfHOel2Jsyinj4xGsY4cNnkLlIx4UXU0g9twdkBI2ef24DadYyc4YyNzhJZ98O8liVCMDyHfy3efUMUHlpVp0zikujthzvzGH"
-                    alt="Monolithic architectural structure"
+                    className="object-cover"
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2400&auto=format&fit=crop"
+                    alt="Modern architectural facade with strong geometric lines"
                     priority
                 />
             </div>
             <div className="relative z-10 text-center px-4">
-                <div className="inline-block py-1 px-4 mb-6 border border-tertiary/30 bg-tertiary/10 backdrop-blur-sm">
-                    <span className="font-label text-tertiary text-[0.75rem] tracking-[0.3em] uppercase">{dict.badge}</span>
+                <div className="inline-block py-1.5 px-5 mb-6 rounded-sm border border-primary/35 bg-background/75 backdrop-blur-md shadow-lg shadow-black/20">
+                    <span className="font-label text-primary text-[0.75rem] tracking-[0.28em] uppercase font-semibold">{dict.badge}</span>
                 </div>
-                <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-on-background mb-4 tracking-tighter">
+                <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tighter drop-shadow-[0_6px_28px_rgba(0,0,0,0.45)]">
                     {dict.title}
                 </h1>
-                <div className="w-32 h-1 bg-gradient-to-r from-transparent via-tertiary to-transparent mx-auto mt-8 gold-shimmer"></div>
+                <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-8" />
             </div>
         </section>
     );

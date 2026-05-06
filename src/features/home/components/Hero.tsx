@@ -9,19 +9,22 @@ export default function Hero({ dict }: { dict: any }) {
             <div className="absolute inset-0 z-0">
                 <motion.div
                     initial={{ scale: 1.15, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 0.6 }}
+                    animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
                     className="relative w-full h-full"
                 >
                     <Image
                         fill
-                        className="object-cover grayscale"
+                        className="object-cover dark:grayscale"
                         alt="cinematic architecture"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuA75aWH2YjrrNPRLc9qvumaD5LYevuPRG-6tvHXFDx5USkWwYCo3NdB2yuGrDSEi9JyDaFuv7lA0N4A73lCf8ZXs0uMm9qIaMYRtzNaTXPo_XpHRzWmbxdPGO48NeQzI4mogZf3rfoj5Y8gd_fJci4eHueNdRTEXuAwg99OO_InkNQaYi2Tmn9MOW5y9DRy-NsbfE4MJfvf5_GZwVi4hxJYapV2exMF27Vp4diAYemTbnFmfZ3FI8sIrsiNEuqJzCUiGWRMU4Itap8d"
                         priority
                     />
                 </motion.div>
-                <div className="absolute inset-0 bg-gradient-to-b from-surface-dim/80 via-surface-dim/40 to-surface-dim"></div>
+                <div
+                    className="absolute inset-0 hidden bg-gradient-to-b from-black/55 via-black/32 to-black/60 dark:block"
+                    aria-hidden
+                />
             </div>
             <div className="relative z-10 text-center px-4 max-w-5xl">
                 <motion.div
@@ -44,7 +47,7 @@ export default function Hero({ dict }: { dict: any }) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="text-on-surface-variant text-lg md:text-xl max-w-2xl font-light leading-relaxed"
+                        className="max-w-3xl text-xl md:text-2xl font-medium leading-relaxed text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]"
                     >
                         {dict.description}
                     </motion.p>

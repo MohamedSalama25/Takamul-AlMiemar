@@ -5,69 +5,91 @@ import Image from "next/image";
 
 export default function About({ dict }: { dict: any }) {
     return (
-        <section id="about" className="py-24 px-8 md:px-24 bg-surface overflow-hidden">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section id="about" className="relative overflow-hidden bg-surface py-24 px-6 md:px-14 lg:px-20">
+            <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-primary/10 blur-3xl" aria-hidden />
+            <div className="pointer-events-none absolute -right-16 bottom-10 h-64 w-64 rounded-full bg-tertiary/10 blur-3xl" aria-hidden />
+
+            <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="max-w-7xl mx-auto grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20"
+            >
                 <motion.div
-                    initial={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, x: -60 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8 }}
-                    className="space-y-8 order-2 lg:order-1"
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="relative order-1 lg:order-2"
                 >
-                    <div className="inline-block px-3 py-1 bg-tertiary/10 border-l-2 border-tertiary">
-                        <span className="text-tertiary text-xs font-bold tracking-widest uppercase">{dict.badge}</span>
+                    <div className="absolute -top-4 -right-4 h-full w-full rounded-sm border border-primary/20" aria-hidden />
+                    <div className="relative aspect-[4/4.2] w-full overflow-hidden rounded-sm border border-outline-variant/30 bg-surface-container shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
+                        <Image
+                            fill
+                            className="object-cover transition-transform duration-700 hover:scale-105"
+                            alt="construction site with engineers reviewing blueprints"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Yl3IzLKhgtg83nO2eg8zPFLP4HIrVty05xjShRGy5HdkusSB1CLhIQcaxyLqsmVNmnWEQeOIrh4R_CEZrnb5asEWNowpDZjRdThRpSgWka_hfDbIpKp8S-BaIQwOsxWjgJeVFcmnAIxI2S9pykxrDMlGSr81n2yocOv9kgzbs4hAfZ7USPuu-MEbvb53_4i7zb80EBmAhfx_BAMIGoWBux4L4oALxtykgkOeIE9QGtVJikZ6PcoaZdiQnW_XXuNoGBLXHU17qh8q"
+                            sizes="(max-width: 1024px) 100vw, 48vw"
+                        />
                     </div>
-                    <h2 className="font-headline text-4xl md:text-5xl font-bold text-on-surface">{dict.title}</h2>
-                    <div className="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: 60 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.85, ease: "easeOut", delay: 0.1 }}
+                    className="order-2 space-y-7 lg:order-1"
+                >
+                    <h2 className="font-headline text-4xl font-bold leading-tight text-on-surface md:text-5xl">
+                        {dict.title}
+                    </h2>
+                    <div className="h-1 w-32 md:w-48 rounded-full bg-gradient-to-l from-tertiary to-transparent" aria-hidden />
+                    <div className="space-y-5 text-base leading-relaxed text-on-surface-variant md:text-lg">
                         <p>{dict.p1} <span className="text-tertiary font-semibold">{dict.p1Bold}</span>{dict.p1Rest}</p>
                         <p>{dict.p2}</p>
                         <p>{dict.p3}</p>
                     </div>
-                    <div className="grid grid-cols-2 gap-4 pt-4">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-60px" }}
+                        variants={{
+                            hidden: {},
+                            visible: {
+                                transition: { staggerChildren: 0.14, delayChildren: 0.2 },
+                            },
+                        }}
+                        className="grid grid-cols-2 gap-4 pt-3"
+                    >
                         <motion.div
-                            whileHover={{ y: -5 }}
-                            className="p-4 border border-outline-variant/30 bg-surface-container-low"
+                            variants={{
+                                hidden: { opacity: 0, y: 20, scale: 0.97 },
+                                visible: { opacity: 1, y: 0, scale: 1 },
+                            }}
+                            whileHover={{ y: -6, scale: 1.02 }}
+                            transition={{ duration: 0.45, ease: "easeOut" }}
+                            className="rounded-sm border border-outline-variant/30 bg-surface-container-low p-4 shadow-sm"
                         >
                             <span className="block text-3xl font-bold text-primary mb-1">{dict.stat1}</span>
                             <span className="text-xs uppercase tracking-widest text-on-surface-variant">{dict.stat1Text}</span>
                         </motion.div>
                         <motion.div
-                            whileHover={{ y: -5 }}
-                            className="p-4 border border-outline-variant/30 bg-surface-container-low"
+                            variants={{
+                                hidden: { opacity: 0, y: 20, scale: 0.97 },
+                                visible: { opacity: 1, y: 0, scale: 1 },
+                            }}
+                            whileHover={{ y: -6, scale: 1.02 }}
+                            transition={{ duration: 0.45, ease: "easeOut" }}
+                            className="rounded-sm border border-outline-variant/30 bg-surface-container-low p-4 shadow-sm"
                         >
                             <span className="block text-3xl font-bold text-primary mb-1">{dict.stat2}</span>
                             <span className="text-xs uppercase tracking-widest text-on-surface-variant">{dict.stat2Text}</span>
                         </motion.div>
-                    </div>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8 }}
-                    className="relative order-1 lg:order-2"
-                >
-                    <div className="absolute -top-4 -right-4 w-full h-full border-2 border-tertiary/20 -z-10"></div>
-                    <div className="relative w-full aspect-square shadow-2xl overflow-hidden">
-                        <Image
-                            fill
-                            className="object-cover"
-                            alt="construction site with engineers reviewing blueprints"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Yl3IzLKhgtg83nO2eg8zPFLP4HIrVty05xjShRGy5HdkusSB1CLhIQcaxyLqsmVNmnWEQeOIrh4R_CEZrnb5asEWNowpDZjRdThRpSgWka_hfDbIpKp8S-BaIQwOsxWjgJeVFcmnAIxI2S9pykxrDMlGSr81n2yocOv9kgzbs4hAfZ7USPuu-MEbvb53_4i7zb80EBmAhfx_BAMIGoWBux4L4oALxtykgkOeIE9QGtVJikZ6PcoaZdiQnW_XXuNoGBLXHU17qh8q"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                    </div>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.5 }}
-                        className="absolute bottom-6 -left-6 bg-surface-container-highest p-6 shadow-xl hidden md:block"
-                    >
-                        <span className="material-symbols-outlined text-tertiary text-4xl mb-2" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                        <p className="font-headline text-xl font-bold text-on-surface whitespace-pre-line">{dict.certificate}</p>
                     </motion.div>
                 </motion.div>
-            </div>
+            </motion.div>
         </section>
     );
 }

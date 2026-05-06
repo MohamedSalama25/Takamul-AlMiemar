@@ -10,11 +10,14 @@ export default function ServicesHero({ dict }: { dict: any }) {
                 <Image
                     fill
                     alt="Architectural Blueprint"
-                    className="object-cover opacity-10"
+                    className="object-cover opacity-100 dark:opacity-10"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPRaLZuL8r1vg1V92fa-3i3yiu8MO1YxOIZFvpLE5wQ6JFSsBip4VS9QnOLILIHqmwQGsY4oiz2sC_D4otu8nJiRPSG8LEzIlmmtejYjONVLDmLdu35ILMxrnHMPOGO_6CyS1DrDKotM22_Dk96eh4xos1isg4qL4nCxY4enoS0NF9V1O8UsyZKqrXqxwTTOh2Npz3QmkkFfEsQ9T9orr01be1C8Q2ayS0tLgsgFrqkyPCSPjiZ2Ps7WjCSziT20ayh0sZZkVneqb9"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-surface-variant/80 via-transparent to-surface-variant/80"></div>
+                <div
+                    className="absolute inset-0 hidden bg-gradient-to-b from-surface-variant/75 via-transparent to-surface-variant/75 dark:block"
+                    aria-hidden
+                />
             </div>
             <div className="relative z-10 max-w-screen-xl mx-auto px-8 text-center">
                 <div className="inline-flex items-center gap-4 mb-8">

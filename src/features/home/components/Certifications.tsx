@@ -19,11 +19,11 @@ export default function Certifications({ dict }: { dict: any }) {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="flex flex-col md:flex-row items-center justify-between mb-16"
+                    className="mb-16"
                 >
                     <h2 className="font-headline text-3xl font-bold">{dict.title}</h2>
-                    <div className="h-px bg-outline-variant/30 flex-grow mx-8 hidden md:block"></div>
-                    <span className="text-tertiary font-bold tracking-widest text-xs uppercase">{dict.badge}</span>
+                    <div className="mt-4 h-1 w-32 md:w-48 rounded-full bg-gradient-to-l from-tertiary to-transparent" aria-hidden />
+                    <span className="mt-4 block text-tertiary font-bold tracking-widest text-xs uppercase">{dict.badge}</span>
                 </motion.div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[

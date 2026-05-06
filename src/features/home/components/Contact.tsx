@@ -17,6 +17,7 @@ export default function Contact({ dict }: { dict: any }) {
                 >
                     <div>
                         <h2 className="font-headline text-5xl font-bold mb-6">{dict.title}</h2>
+                        <div className="mb-6 h-1 w-32 md:w-48 rounded-full bg-gradient-to-l from-tertiary to-transparent" aria-hidden />
                         <p className="text-on-surface-variant text-lg">{dict.desc}</p>
                     </div>
                     <div className="space-y-6">

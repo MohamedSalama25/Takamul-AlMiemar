@@ -1,73 +1,71 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const SmallBranchMap = dynamic(
+    () => import("./SmallBranchMap").then((mod) => mod.SmallBranchMap),
+    {
+        ssr: false,
+        loading: () => (
+            <div className="flex h-full w-full items-center justify-center bg-surface">
+                <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+            </div>
+        ),
+    }
+);
 
 export default function ContactDetails({ info, hubs }: { info: any, hubs: any }) {
     return (
-        <div className="lg:col-span-5 flex flex-col gap-8">
-            {/* Core Info */}
-            <div className="bg-surface-variant p-10 space-y-8 glass-panel border border-tertiary/10 rounded-sm">
+        <aside className="lg:col-span-5 flex flex-col gap-6">
+            <div className="rounded-sm border border-outline-variant/25 bg-surface p-7 shadow-[0_12px_28px_rgba(17,24,39,0.07)] dark:border-outline-variant/35 dark:bg-surface-container-low dark:shadow-[0_16px_40px_rgba(0,0,0,0.14)] md:p-8">
                 <div>
-                    <span className="font-label text-[0.65rem] text-tertiary uppercase tracking-widest mb-4 block">{info.hq}</span>
-                    <div className="flex gap-4">
+                    <span className="mb-3 block font-label text-[0.65rem] uppercase tracking-widest text-tertiary">{info.hq}</span>
+                    <div className="flex items-start gap-3">
                         <span className="material-symbols-outlined text-tertiary">location_on</span>
-                        <p className="font-body text-sm leading-relaxed text-on-background italic">
+                        <p className="font-body text-sm leading-relaxed text-on-background">
                             {info.hqAddress}
                         </p>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-white/10">
+                <div className="mt-6 grid grid-cols-1 gap-6 border-t border-outline-variant/25 pt-6 md:grid-cols-2">
                     <div>
-                        <span className="font-label text-[0.65rem] text-tertiary uppercase tracking-widest mb-4 block">{info.inquiries}</span>
-                        <div className="flex items-center gap-3">
+                        <span className="mb-2 block font-label text-[0.65rem] uppercase tracking-widest text-tertiary">{info.inquiries}</span>
+                        <div className="flex items-center gap-2 text-sm text-on-background">
                             <span className="material-symbols-outlined text-tertiary text-sm">call</span>
-                            <span className="font-body text-sm text-on-background">+966 11 234 5678</span>
+                            <span className="font-body" dir="ltr">+966 53 151 5110</span>
                         </div>
                     </div>
                     <div>
-                        <span className="font-label text-[0.65rem] text-tertiary uppercase tracking-widest mb-4 block">{info.email}</span>
-                        <div className="flex items-center gap-3">
+                        <span className="mb-2 block font-label text-[0.65rem] uppercase tracking-widest text-tertiary">{info.email}</span>
+                        <div className="flex items-center gap-2 text-sm text-on-background">
                             <span className="material-symbols-outlined text-tertiary text-sm">mail</span>
-                            <span className="font-body text-sm text-on-background">{info.emailValue}</span>
+                            <span className="font-body">{info.emailValue}</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Regional Hubs Bento */}
             <div className="grid grid-cols-1 gap-4">
-                <div className="bg-background border border-tertiary/10 p-6 flex justify-between items-center group cursor-pointer transition-colors hover:bg-surface-variant rounded-sm">
+                <div className="group flex items-center justify-between rounded-sm border border-outline-variant/25 bg-background p-5 transition-all hover:border-primary/40 hover:bg-surface dark:border-outline-variant/30 dark:bg-surface-container-lowest dark:hover:bg-surface-container-low">
                     <div>
-                        <h4 className="font-headline font-bold text-sm text-on-background">{hubs.jeddah}</h4>
-                        <p className="text-[0.7rem] text-on-surface-variant mt-1 uppercase tracking-tighter italic">{hubs.jeddahDesc}</p>
+                        <h4 className="font-headline text-sm font-bold text-on-background">{hubs.jeddah}</h4>
+                        <p className="mt-1 text-[0.72rem] uppercase tracking-wide text-on-surface-variant">{hubs.jeddahDesc}</p>
                     </div>
-                    <span className="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">hub</span>
+                    <span className="material-symbols-outlined text-tertiary transition-transform group-hover:scale-110">hub</span>
                 </div>
-                <div className="bg-background border border-tertiary/10 p-6 flex justify-between items-center group cursor-pointer transition-colors hover:bg-surface-variant rounded-sm">
+                <div className="group flex items-center justify-between rounded-sm border border-outline-variant/25 bg-background p-5 transition-all hover:border-primary/40 hover:bg-surface dark:border-outline-variant/30 dark:bg-surface-container-lowest dark:hover:bg-surface-container-low">
                     <div>
-                        <h4 className="font-headline font-bold text-sm text-on-background">{hubs.jubail}</h4>
-                        <p className="text-[0.7rem] text-on-surface-variant mt-1 uppercase tracking-tighter italic">{hubs.jubailDesc}</p>
+                        <h4 className="font-headline text-sm font-bold text-on-background">{hubs.jubail}</h4>
+                        <p className="mt-1 text-[0.72rem] uppercase tracking-wide text-on-surface-variant">{hubs.jubailDesc}</p>
                     </div>
-                    <span className="material-symbols-outlined text-tertiary group-hover:scale-110 transition-transform">factory</span>
+                    <span className="material-symbols-outlined text-tertiary transition-transform group-hover:scale-110">factory</span>
                 </div>
             </div>
 
-            {/* Map Placeholder with stylization */}
-            <div className="relative bg-background h-[240px] overflow-hidden border border-tertiary/20 rounded-sm">
-                <Image
-                    fill
-                    className="object-cover opacity-20 contrast-125 grayscale scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJc0zjgzHhu1WAuoysJWfYsA6N1PnINEZcAdZsVa-nuflFBi8yygia1qV01JxLMoecrtqczvNcjQNNEEp7pI719g9LGdzQYXB9MwRJd3uzblf5CYUkmSadr9oxWa_7AXPBU7IDXpjvNRfbjfiMwCCpq4gCgpseJJM-Hq6vnz7ATn5N0vRy-w9DRlia0KiYrEdvRMR5pYCfS163jquQqAOl8XOrL0tEmqJYYHvUPjMCPKdSV1ptWYI6O_mP_D5-Qy1hioy8ajnmrcWV"
-                    alt="Riyadh street map layout"
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 flex items-center gap-3 bg-surface-variant/80 backdrop-blur-md py-2 px-4 border border-tertiary/20">
-                    <div className="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_rgba(234,195,74,0.6)]"></div>
-                    <span className="font-label text-[0.65rem] uppercase tracking-[0.2em] text-on-background">Operational Presence: KSA</span>
-                </div>
+            <div className="relative h-[220px] overflow-hidden rounded-sm border border-outline-variant/25 bg-background dark:border-outline-variant/30 dark:bg-surface-container-lowest">
+                <SmallBranchMap />
             </div>
-        </div>
+        </aside>
     );
 }

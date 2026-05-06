@@ -6,7 +6,6 @@ import Footer from "@/shared/components/layout/Footer";
 import ContactHero from "./components/ContactHero";
 import ContactForm from "./components/ContactForm";
 import ContactDetails from "./components/ContactDetails";
-import PartnerSection from "./components/PartnerSection";
 
 export default function ContactView({ dictionary }: { dictionary: any }) {
     const dict = dictionary.contactPage;
@@ -16,9 +15,8 @@ export default function ContactView({ dictionary }: { dictionary: any }) {
             <Navigation dict={dictionary.nav} />
             <ContactHero dict={dict.hero} />
 
-            {/* Main Content Grid */}
-            <section className="max-w-7xl mx-auto px-8 -mt-32 relative z-20 pb-24">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <section className="relative z-20 mx-auto -mt-28 max-w-7xl px-6 pb-16 md:-mt-32 md:px-8">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
                     <ContactForm dict={dict.form} />
                     <ContactDetails
                         info={dict.info}
@@ -27,7 +25,6 @@ export default function ContactView({ dictionary }: { dictionary: any }) {
                 </div>
             </section>
 
-            <PartnerSection dict={dict.partner} />
             <Footer dict={dictionary.footer} />
         </main>
     );

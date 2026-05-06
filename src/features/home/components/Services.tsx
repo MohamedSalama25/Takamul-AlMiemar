@@ -28,7 +28,7 @@ export default function Services({ dict }: { dict: any }) {
                     className="text-center mb-20"
                 >
                     <h2 className="font-headline text-4xl font-bold mb-4">{dict.title}</h2>
-                    <div className="w-20 h-1 bg-tertiary mx-auto"></div>
+                    <div className="h-1 w-32 md:w-48 rounded-full bg-gradient-to-l from-tertiary to-transparent mx-auto" aria-hidden />
                 </motion.div>
                 <motion.div
                     variants={containerVariants}
