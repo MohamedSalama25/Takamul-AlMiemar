@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Certifications({ dict }: { dict: any }) {
+export default function Certifications({ dict, isRtl = true }: { dict: any; isRtl?: boolean }) {
     const cardVariants = {
         hidden: { opacity: 0, y: 30 },
         visible: (i: number) => ({
@@ -22,7 +22,7 @@ export default function Certifications({ dict }: { dict: any }) {
                     className="mb-16"
                 >
                     <h2 className="font-headline text-3xl font-bold">{dict.title}</h2>
-                    <div className="mt-4 h-1 w-32 md:w-48 rounded-full bg-gradient-to-l from-tertiary to-transparent" aria-hidden />
+                    <div className={`mt-4 h-1 w-32 md:w-48 rounded-full ${isRtl ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-tertiary to-transparent`} aria-hidden />
                     <span className="mt-4 block text-tertiary font-bold tracking-widest text-xs uppercase">{dict.badge}</span>
                 </motion.div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

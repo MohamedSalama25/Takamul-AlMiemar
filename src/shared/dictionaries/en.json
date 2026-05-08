@@ -1,18 +1,21 @@
 {
     "nav": {
         "title": "Takamul AlMiemar",
+        "home": "Home",
         "about": "About",
         "services": "Services",
         "projects": "Projects",
         "clients": "Clients",
-        "contact": "Contact"
+        "contact": "Contact",
+        "menu": "Menu",
+        "controls": "Controls"
     },
     "hero": {
         "subtitle": "Takamul AlMiemar For Contracting",
         "title1": "Shaping Dreams.",
         "title2": "Building Reality.",
         "title3": "Engineering Precision.",
-        "description": "A leading firm in the contracting industry, established in 2010, dedicated to excellence by adopting the latest technologies and adhering to the highest quality standards across the Kingdom.",
+        "description": "A leading contracting firm delivering integrated engineering solutions with modern technologies and top-quality standards across the Kingdom.",
         "ctaProjects": "View Projects",
         "ctaContact": "Contact Us"
     },
@@ -127,8 +130,8 @@
         "hero": {
             "badge": "Portfolio",
             "title": "Our Portfolio",
-            "subtitle": "Architecture of Integrity, Engineering of Excellence",
-            "description": "Showcasing a curated selection of landmarks that demonstrate our commitment to structural precision and architectural beauty"
+            "subtitle": "Engineering Excellence",
+            "description": "A selected portfolio of projects delivered with precision and quality."
         },
         "filters": {
             "all": "All",
@@ -138,134 +141,104 @@
             "residential": "Residential"
         },
         "cta": {
-            "title": "Build Your Masterpiece",
-            "subtitle": "Partner with us to transform your vision into an architectural reality built with precision and integrity.",
-            "button": "Start a Consultation"
+            "title": "Start Your Project Today",
+            "subtitle": "Share your requirements with our team and get a tailored execution plan.",
+            "button": "Start Your Project Now"
         },
         "projects": [
             {
-                "title": "AlRashed Wooden Factory - Rabigh",
-                "category": "Industrial",
-                "location": "Rabigh, KSA",
-                "image": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2000&auto=format&fit=crop"
-            },
-            {
-                "title": "Rabigh 1200 MW CCPP Station",
-                "category": "MEP",
-                "location": "Rabigh, KSA",
-                "image": "https://images.unsplash.com/photo-1473876637968-47e6f3d449e7?q=80&w=2000&auto=format&fit=crop"
-            },
-            {
-                "title": "Mahmoud Saed Cans Factory",
-                "category": "Industrial",
-                "location": "Jeddah, KSA",
-                "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop"
+                "title": "Main Library Project - Prince Naif Security University",
+                "description": "As per the agreed scope of work and site condition, our team delivered the necessary technical expertise and professional management with outstanding workmanship.",
+                "images": [
+                    "/projects/main-library/1.jpg",
+                    "/projects/main-library/2.jpg",
+                    "/projects/main-library/3.jpg",
+                    "/projects/main-library/4.jpg",
+                    "/projects/main-library/5.jpg"
+                ]
             },
             {
                 "title": "King Khaled Hospital",
-                "category": "Commercial",
-                "location": "Riyadh, KSA",
-                "image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce2?q=80&w=2000&auto=format&fit=crop"
+                "description": "Construction of King Khaled Hospital in Riyadh with full supervision, technical delivery, and disciplined project management from our execution team.",
+                "images": [
+                    "/projects/king-khaled-hospital/1.jpg",
+                    "/projects/king-khaled-hospital/2.jpg",
+                    "/projects/king-khaled-hospital/3.jpg",
+                    "/projects/king-khaled-hospital/4.jpg",
+                    "/projects/king-khaled-hospital/5.jpg"
+                ]
             },
             {
-                "title": "Main Library - Prince Naif University",
-                "category": "Commercial",
-                "location": "Riyadh, KSA",
-                "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2000&auto=format&fit=crop"
+                "title": "Riyadh Entertainment Authority",
+                "description": "Our team executed the project scope with high-quality workmanship, technical coordination, and professional delivery within the planned timeline.",
+                "images": [
+                    "/projects/riyadh-entertainment/1.jpg",
+                    "/projects/riyadh-entertainment/2.jpg",
+                    "/projects/riyadh-entertainment/3.jpg",
+                    "/projects/riyadh-entertainment/4.jpg",
+                    "/projects/riyadh-entertainment/5.jpg"
+                ]
             },
             {
-                "title": "King Salman Exhibition Centre",
-                "category": "Commercial",
-                "location": "Riyadh, KSA",
-                "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2000&auto=format&fit=crop"
+                "title": "King Salman Exhibition Centre - Riyadh",
+                "description": "Design and build project delivered with strong technical control, professional management, and reliable on-site execution.",
+                "images": [
+                    "/projects/king-salman-centre/1.jpg",
+                    "/projects/king-salman-centre/2.jpg",
+                    "/projects/king-salman-centre/3.jpg",
+                    "/projects/king-salman-centre/4.jpg",
+                    "/projects/king-salman-centre/5.jpg"
+                ]
+            },
+            {
+                "title": "Private Projects and Commercial Stores - Riyadh",
+                "description": "Implementing multiple private projects and commercial stores in Riyadh through a coordinated team focused on quality and schedule commitment.",
+                "images": [
+                    "/projects/private-commercial-riyadh/1.jpg",
+                    "/projects/private-commercial-riyadh/2.jpg",
+                    "/projects/private-commercial-riyadh/3.jpg",
+                    "/projects/private-commercial-riyadh/4.jpg",
+                    "/projects/private-commercial-riyadh/5.jpg"
+                ]
             }
         ]
     },
     "aboutPage": {
-        "hero": {
-            "badge": "Since 2010",
-            "title": "Architects of Structural",
-            "titleAccent": "Integrity",
-            "subtitle": "Takamul AlMiemar: Leaders in engineering and construction since 2010, shaping the future of infrastructure with the highest standards of precision and quality."
+        "integration": {
+            "title": "About integration",
+            "description": "Takamul Projects for Professional Consulting offers various services including project management, engineering, management, and financial consulting. We provide creative, unique solutions by combining technical expertise with management skills and a spirit of innovation.",
+            "cta": "Company profile",
+            "ctaAriaLabel": "Company profile"
         },
-        "story": {
-            "badge": "The Legacy",
-            "title": "Our Story",
-            "p1": "Founded in 2010, Takamul AlMiemar began with a singular vision: excellence in technology and quality in the contracting sector.",
-            "p2": "Since its inception, the company has successfully built a strong reputation by delivering advanced engineering solutions and adhering to the highest standards, making it a reliable partner in infrastructure development.",
-            "timeline": [
-                {
-                    "year": "2010",
-                    "title": "The Foundation",
-                    "desc": "Established as a specialized engineering consultancy with a focus on high-precision structural integrity and boutique architectural projects."
-                },
-                {
-                    "year": "2015",
-                    "title": "Scaling Horizons",
-                    "desc": "Transitioned into full-scale EPC contracting, securing landmark government infrastructure projects across the Kingdom."
-                },
-                {
-                    "year": "2024",
-                    "title": "A Global Standard",
-                    "desc": "Recognized as a multi-billion dollar engineering firm leading in innovation, safety, and sustainable construction practices."
-                }
-            ]
-        },
-        "mission": {
-            "badge": "Mission",
-            "title": "Construction Partner for Life",
-            "desc": "Providing high-quality projects by a professional team who aim to reach the best results at all levels, starting from design to final delivery.",
-            "accent": "We aim to provide not only the best prices but also the best materials and customer service, establishing long-term relationships and ongoing training for our staff."
-        },
-        "vision": {
-            "badge": "Vision",
-            "title": "Leadership & Growth",
-            "desc": "To apply our expertise and growth-oriented values across all domains to establish ourselves as the experts in our field and deliver superior engineering."
-        },
-        "values": {
-            "badge": "Our DNA",
-            "title": "Core Values",
+        "certificates": {
+            "title": "Certificates",
+            "subtitle": "Quality, safety, and regulatory certificates that reflect our compliance and execution standards.",
             "items": [
                 {
-                    "icon": "handshake",
-                    "title": "Client Satisfaction",
-                    "subtitle": "رضا العملاء",
-                    "desc": "Our top priority and first concern is client satisfaction."
+                    "title": "ISO 9001:2015",
+                    "image": "/certificates/1.png"
                 },
                 {
-                    "icon": "verified",
-                    "title": "Credibility",
-                    "subtitle": "المصداقية",
-                    "desc": "We are accountable for our actions, ensuring high professional quality, credibility, and honesty."
+                    "title": "ISO 45001:2018",
+                    "image": "/certificates/2.png"
                 },
                 {
-                    "icon": "lightbulb",
-                    "title": "Innovation",
-                    "subtitle": "الابتكار",
-                    "desc": "Innovation and creativity, coupled with quick performance and execution."
+                    "title": "ISO 14001:2015",
+                    "image": "/certificates/3.png"
                 },
                 {
-                    "icon": "health_and_safety",
-                    "title": "Safety",
-                    "subtitle": "السلامة",
-                    "desc": "We work safely and are dedicated to ensuring the health and safety of our employees."
+                    "title": "Balady Certificate",
+                    "image": "/certificates/4.png"
+                },
+                {
+                    "title": "Balady Supplement - Page 1",
+                    "image": "/certificates/5.png"
+                },
+                {
+                    "title": "Balady Supplement - Page 2",
+                    "image": "/certificates/6.png"
                 }
             ]
-        },
-        "leadership": {
-            "badge": "Management",
-            "title": "Executive Leadership",
-            "subtitle": "Our Specialized & Leadership Team",
-            "members": [
-                {
-                    "name": "Saad Khalaf Al-Anzi",
-                    "role": "Owner & General Manager",
-                    "experience": "20+ Years Experience",
-                    "desc": "Saad Khalaf Al-Anzi, Founder and General Manager of Takamul AlMiemar For Contracting. He has led the company with an ambitious vision since 2010, transforming it into a leader in the KSA construction and engineering sector through innovation and execution excellence."
-                }
-            ],
-            "experienceLabel": "Technical Expertise",
-            "legacyLabel": "Engineering Legacy"
         }
     },
     "contactPage": {
@@ -296,14 +269,20 @@
             ],
             "message": "Technical Brief",
             "messagePlaceholder": "Provide a high-level overview of your requirements...",
-            "submit": "Submit Consultation Request"
+            "submit": "Submit Consultation Request",
+            "successMessage": "Your request has been sent successfully.",
+            "errorMessage": "Failed to send your request. Please try again."
         },
         "info": {
             "hq": "Headquarters",
-            "hqAddress": "7880 Qurtoba District, Sheikh Hassan Bin Husain Bin Ali St, Riyadh 13245, KSA",
+            "hqAddress": "Kingdom of Saudi Arabia, P.O. Box 16058 Riyadh 13245, Qurtubah District, Al Hassan Bin Hussein Bin Ali Street, Building No. 7880",
             "inquiries": "Inquiries & Contact",
             "email": "Email",
-            "emailValue": "info@takamul.com.sa"
+            "emailValue": "info@takamulsaudi.com",
+            "phoneMain": "011 209 7048",
+            "phoneAlt1": "058 305 1777",
+            "phoneAlt2": "059 915 4100",
+            "website": "www.takamulsaudi.com"
         },
         "hubs": {
             "jeddah": "Jeddah Division",
@@ -363,6 +342,7 @@
     "certifications": {
         "title": "Uncompromising Standards",
         "badge": "Quality & Safety",
+        "complianceRateLabel": "Compliance Rate",
         "c1Badge": "ISO 9001:2015",
         "c1Desc": "Quality Management Systems certifying our commitment to organizational excellence and client satisfaction.",
         "c2Badge": "ISO 45001:2018",
@@ -374,38 +354,42 @@
         "title": "Start Your Next Landmark Project",
         "desc": "Discuss your engineering requirements with our specialists. We are ready to execute your vision with precision and structural excellence.",
         "info1Title": "Headquarters",
-        "info1Desc": "7880 Qurtoba District, Sheikh Hassan Bin Husain Bin Ali St, Riyadh 13245, KSA",
+        "info1Desc": "Kingdom of Saudi Arabia, P.O. Box 16058 Riyadh 13245, Qurtubah District, Al Hassan Bin Hussein Bin Ali Street, Building No. 7880",
         "info2Title": "Direct Inquiry",
-        "info2Desc": "+966 53 151 5110",
+        "info2Desc": "011 209 7048 / 058 305 1777 / 059 915 4100",
         "info3Title": "Digital Correspondence",
-        "info3Desc": "info@takamul.com.sa",
+        "info3Desc": "info@takamulsaudi.com - www.takamulsaudi.com",
         "formName": "Full Name",
         "formEmail": "Email Address",
         "formType": "Project Type (e.g., MEP, Industrial, Finishing)",
         "formMessage": "Briefly describe your project requirements",
-        "formSubmit": "Request a Consultation"
+        "formSubmit": "Request a Consultation",
+        "successMessage": "Your request has been sent successfully.",
+        "errorMessage": "Failed to send your request. Please try again."
     },
     "footer": {
         "title": "Takamul AlMiemar",
         "desc": "Leading the construction evolution in Saudi Arabia with integrity, innovation, and unrivaled engineering precision.",
         "navTitle": "Navigation",
         "navLinks": [
+            "Home",
             "About Us",
             "Our Services",
             "Project Portfolio",
-            "Client Testimonials",
-            "Careers"
+            "Contact Us"
         ],
         "resourcesTitle": "Resources",
         "resourcesLinks": [
-            "Privacy Policy",
-            "Terms of Service",
-            "Engineering Standards",
-            "Quality Control"
+            "Company Profile",
+            "Our Certificates",
+            "Contact Us",
+            "Location"
         ],
         "newsletterTitle": "Newsletter",
         "newsletterDesc": "Stay updated with our latest landmarks.",
         "newsletterPlaceholder": "Email",
+        "newsletterSuccess": "Subscription sent successfully.",
+        "newsletterError": "Failed to subscribe. Please try again.",
         "copyright": "© 2024 Takamul AlMiemar. Architectural Excellence."
     },
     "professionalServices": {
@@ -416,16 +400,16 @@
                 "title": "Architectural Domes Design",
                 "desc": "Innovation and quality for durable metal domes adding an exceptional aesthetic touch to residential and sports projects.",
                 "highlights": [
-                    "Innovation",
-                    "Excellence",
-                    "Specialized Domes"
+                    "Dome Design",
+                    "Quality Craftsmanship",
+                    "Tailored Solutions"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200",
-                    "https://images.unsplash.com/photo-1541888081198-6447c210459b?w=1200",
-                    "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200",
-                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200",
-                    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200"
+                    "/home/metals/domes/1.jpg",
+                    "/home/metals/domes/2.jpg",
+                    "/home/metals/domes/3.jpg",
+                    "/home/metals/domes/4.jpg",
+                    "/home/metals/domes/5.jpg"
                 ]
             },
             {
@@ -437,11 +421,11 @@
                     "Durable Solutions"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1504307651254-35680f3366d4?w=1200",
-                    "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200",
-                    "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=1200",
-                    "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200",
-                    "https://images.unsplash.com/photo-1541888081198-6447c210459b?w=1200"
+                    "/home/metals/integrated/1.jpg",
+                    "/home/metals/integrated/2.jpg",
+                    "/home/metals/integrated/3.jpg",
+                    "/home/metals/integrated/4.png",
+                    "/home/metals/integrated/5.png"
                 ]
             },
             {
@@ -453,11 +437,11 @@
                     "Modern Design"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200",
-                    "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=1200",
-                    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200",
-                    "https://images.unsplash.com/photo-1504307651254-35680f3366d4?w=1200",
-                    "https://images.unsplash.com/photo-1581092920463-20ee60d32909?w=1200"
+                    "/home/metals/doors/1.jpg",
+                    "/home/metals/doors/2.jpg",
+                    "/home/metals/doors/3.jpg",
+                    "/home/metals/doors/4.jpg",
+                    "/home/metals/doors/5.jpg"
                 ]
             },
             {
@@ -469,11 +453,11 @@
                     "Integration"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?w=1200",
-                    "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=1200",
-                    "https://images.unsplash.com/photo-1520038410233-7141f0bc1b1c?w=1200",
-                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200",
-                    "https://images.unsplash.com/photo-1541888081198-6447c210459b?w=1200"
+                    "/home/metals/glass/1.jpg",
+                    "/home/metals/glass/2.jpg",
+                    "/home/metals/glass/3.jpg",
+                    "/home/metals/glass/4.jpg",
+                    "/home/metals/glass/5.jpg"
                 ]
             },
             {
@@ -485,11 +469,11 @@
                     "Complex Engineering"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200",
-                    "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=1200",
-                    "https://images.unsplash.com/photo-1504307651254-35680f3366d4?w=1200",
-                    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200",
-                    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200"
+                    "/home/metals/structures/1.jpg",
+                    "/home/metals/structures/2.jpg",
+                    "/home/metals/structures/3.jpg",
+                    "/home/metals/structures/4.jpg",
+                    "/home/metals/structures/5.jpg"
                 ]
             }
         ]

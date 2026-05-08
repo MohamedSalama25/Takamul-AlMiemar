@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function AboutIntegrationSection() {
+export default function AboutIntegrationSection({ dict }: { dict?: any }) {
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden text-on-background bg-[#f7f7fb] dark:bg-[#060f19]">
             {/* Background */}
@@ -44,24 +44,23 @@ export default function AboutIntegrationSection() {
                     {/* Content */}
                     <div className="w-full max-w-[560px] mx-auto lg:mx-0">
                         <h2 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-on-background">
-                            About integration
+                            {dict?.title ?? "About integration"}
                         </h2>
                         <div className="mt-5 h-[2px] w-14 bg-tertiary" />
 
                         <p className="mt-8 text-on-surface-variant leading-8 text-[15px] md:text-base">
-                            Takamul Projects for Professional Consulting offers various services including project management,
-                            engineering, management and financial consulting services. It is characterized by the creative and
-                            unique solutions it provides to clients by combining technical expertise and management skills
-                            enhanced by a spirit of innovation and creativity.
+                            {dict?.description ??
+                                "Takamul Projects for Professional Consulting offers various services including project management, engineering, management and financial consulting services. It is characterized by the creative and unique solutions it provides to clients by combining technical expertise and management skills enhanced by a spirit of innovation and creativity."}
                         </p>
 
                         <a
-                            href="#"
+                            href="/Takamul%20Almiemar%20For%20Contracting.pdf"
+                            download="Takamul Company Profile.pdf"
                             className="mt-12 inline-flex w-full items-center justify-center gap-3 border border-tertiary text-tertiary px-10 py-4 text-sm font-semibold tracking-wide transition-all duration-300 ease-out active:scale-[0.99] hover:bg-tertiary hover:text-on-tertiary hover:shadow-[0_18px_45px_rgba(0,0,0,0.14)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tertiary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-                            aria-label="Company profile"
+                            aria-label={dict?.ctaAriaLabel ?? "Company profile"}
                         >
                             <span className="material-symbols-outlined text-[18px]">description</span>
-                            Company profile
+                            {dict?.cta ?? "Company profile"}
                         </a>
                     </div>
                 </div>

@@ -1,16 +1,27 @@
-import Cookies from "js-cookie";
-
 export type Language = "ar" | "en";
 
 const COOKIE_NAME = "NEXT_LOCALE";
 
 export const getLanguage = (): Language => {
-    return (Cookies.get(COOKIE_NAME) as Language) || "ar";
-};
+    try {
+        const cookieValue = document.cookie
+            .split("; ")
+            .find((part) => part.startsWith(`${COOKIE_NAME}=`))
+            ?.split("=")[1];
+        const fromCookie = decodeURIComponent(cookieValue ?? "") as Language;
+        if (fromCookie === "ar" || fromCookie === "en") return fromCookie;
+    } catch {
+        // ignore
+    }
 
-export const setLanguage = (lang: Language) => {
-    Cookies.set(COOKIE_NAME, lang, { expires: 365 });
-    window.location.reload();
+    try {
+        const fromSession = sessionStorage.getItem(COOKIE_NAME) as Language | null;
+        if (fromSession === "ar" || fromSession === "en") return fromSession;
+    } catch {
+        // ignore
+    }
+
+    return "ar";
 };
 
 export const isRTL = (lang: Language): boolean => {

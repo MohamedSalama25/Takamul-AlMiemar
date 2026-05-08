@@ -3,18 +3,24 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
 
-export default function Navigation({ dict }: { dict: any }) {
+export default function Navigation({
+    dict,
+    dir = "rtl",
+}: {
+    dict: any;
+    dir?: "rtl" | "ltr";
+}) {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
-    const isArabicUI = /[\u0600-\u06FF]/.test(
-        `${dict.about ?? ""}${dict.services ?? ""}${dict.projects ?? ""}${dict.contact ?? ""}`
-    );
+    const isRtl = dir === "rtl";
 
     const navLinks = [
+        { name: dict.home ?? "Home", href: "/" },
         { name: dict.about, href: "/about" },
         { name: dict.services, href: "/services" },
         { name: dict.projects, href: "/projects" },
@@ -29,15 +35,15 @@ export default function Navigation({ dict }: { dict: any }) {
                     animate={{ y: 0, opacity: 1 }}
                     className="w-full max-w-7xl rounded-sm border border-white/5 bg-background/60 backdrop-blur-xl flex justify-between items-center px-6 md:px-8 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.3)] pointer-events-auto"
                 >
-                    <Link href="/" className="text-lg md:text-xl font-bold tracking-tighter text-on-surface flex items-center gap-2 group">
-                        <motion.span
-                            whileHover={{ rotate: 90 }}
-                            className="text-tertiary material-symbols-outlined text-2xl"
-                            style={{ fontVariationSettings: "'FILL' 1" }}
-                        >
-                            architecture
-                        </motion.span>
-                        <span className="group-hover:text-tertiary transition-colors">{dict.title}</span>
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/logo.jpg"
+                            alt={dict.title}
+                            width={250}
+                            height={70}
+                            className="h-8 md:h-10 w-auto object-contain"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Menu */}
@@ -59,7 +65,7 @@ export default function Navigation({ dict }: { dict: any }) {
                                             href={link.href}
                                         >
                                             {link.name}
-                                            <span className={`absolute -bottom-1 left-0 h-px bg-tertiary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                                            <span className={`absolute -bottom-1 ${isRtl ? "right-0" : "left-0"} h-px bg-tertiary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
                                                 }`}></span>
                                         </a>
                                     ) : (
@@ -69,7 +75,7 @@ export default function Navigation({ dict }: { dict: any }) {
                                             href={link.href}
                                         >
                                             {link.name}
-                                            <span className={`absolute -bottom-1 left-0 h-px bg-tertiary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                                            <span className={`absolute -bottom-1 ${isRtl ? "right-0" : "left-0"} h-px bg-tertiary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
                                                 }`}></span>
                                         </Link>
                                     )}
@@ -117,25 +123,25 @@ export default function Navigation({ dict }: { dict: any }) {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="fixed inset-0 bg-background/80 backdrop-blur-sm z-[60] md:hidden"
+                            className="fixed inset-0 bg-background/30 backdrop-blur-[1px] z-[60] md:hidden"
                         />
 
                         {/* Sidebar */}
                         <motion.div
-                            initial={{ x: "100%", opacity: 0.8, scale: 0.98 }}
+                            dir={dir}
+                            initial={{ x: isRtl ? "100%" : "-100%", opacity: 0.8, scale: 0.98 }}
                             animate={{ x: 0, opacity: 1, scale: 1 }}
-                            exit={{ x: "100%", opacity: 0.8, scale: 0.985 }}
+                            exit={{ x: isRtl ? "100%" : "-100%", opacity: 0.8, scale: 0.985 }}
                             transition={{ type: "spring", damping: 24, stiffness: 250, mass: 0.85 }}
-                            dir={isArabicUI ? "rtl" : "ltr"}
-                            className="fixed top-0 right-0 h-full w-[72%] max-w-[280px] bg-surface z-[70] md:hidden px-5 pt-5 pb-7 flex flex-col shadow-[0_34px_85px_rgba(0,0,0,0.3)] border-l border-outline-variant/30"
+                            className={`fixed top-0 ${isRtl ? "right-0 border-l" : "left-0 border-r"} h-full w-[72%] max-w-[280px] bg-surface z-[70] md:hidden px-5 pt-5 pb-7 flex flex-col shadow-[0_34px_85px_rgba(0,0,0,0.3)] border-outline-variant/30`}
                         >
                             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-tertiary/5" aria-hidden />
 
-                            <div className="relative flex items-center justify-between pb-4 border-b border-outline-variant/20">
+                            <div className={`relative flex items-center justify-between pb-4 border-b border-outline-variant/20 ${isRtl ? "flex-row-reverse" : ""}`}>
                                 <button onClick={() => setIsOpen(false)} className="text-on-background/80 hover:text-on-background transition-colors">
                                     <span className="material-symbols-outlined text-[1.75rem]">close</span>
                                 </button>
-                                <span className="text-xs font-label tracking-widest text-tertiary uppercase">Menu</span>
+                                <span className="text-xs font-label tracking-widest text-tertiary uppercase">{dict.menu ?? "Menu"}</span>
                             </div>
 
                             <motion.div
@@ -154,7 +160,7 @@ export default function Navigation({ dict }: { dict: any }) {
                                     return (
                                         <motion.div
                                             variants={{
-                                                hidden: { opacity: 0, x: 24, scale: 0.98 },
+                                                hidden: { opacity: 0, x: isRtl ? 24 : -24, scale: 0.98 },
                                                 show: { opacity: 1, x: 0, scale: 1 },
                                             }}
                                             transition={{ duration: 0.35, ease: "easeOut" }}
@@ -164,8 +170,8 @@ export default function Navigation({ dict }: { dict: any }) {
                                                 <a
                                                     href={link.href}
                                                     onClick={() => setIsOpen(false)}
-                                                    className={`relative text-[1.35rem] leading-none font-bold transition-all duration-300 font-headline flex items-center ${isArabicUI ? "justify-end text-right" : "justify-start text-left"} gap-3 group px-3.5 py-3 rounded-lg ${isActive
-                                                            ? "text-on-primary bg-primary shadow-[0_12px_24px_rgba(0,71,133,0.28)]"
+                                                    className={`relative text-[1.35rem] leading-none font-bold transition-all duration-300 font-headline flex items-center ${isRtl ? "justify-end text-right" : "justify-start text-left"} gap-3 group px-3.5 py-3 rounded-lg ${isActive
+                                                            ? "text-on-tertiary bg-tertiary shadow-[0_12px_24px_rgba(107,95,0,0.28)]"
                                                             : "text-on-background/80 hover:text-primary hover:bg-surface-container-low"
                                                         }`}
                                                 >
@@ -175,8 +181,8 @@ export default function Navigation({ dict }: { dict: any }) {
                                                 <Link
                                                     href={link.href}
                                                     onClick={() => setIsOpen(false)}
-                                                    className={`relative text-[1.35rem] leading-none font-bold transition-all duration-300 font-headline flex items-center ${isArabicUI ? "justify-end text-right" : "justify-start text-left"} gap-3 group px-3.5 py-3 rounded-lg ${isActive
-                                                            ? "text-on-primary bg-primary shadow-[0_12px_24px_rgba(0,71,133,0.28)]"
+                                                    className={`relative text-[1.35rem] leading-none font-bold transition-all duration-300 font-headline flex items-center ${isRtl ? "justify-end text-right" : "justify-start text-left"} gap-3 group px-3.5 py-3 rounded-lg ${isActive
+                                                            ? "text-on-tertiary bg-tertiary shadow-[0_12px_24px_rgba(107,95,0,0.28)]"
                                                             : "text-on-background/80 hover:text-primary hover:bg-surface-container-low"
                                                         }`}
                                                 >
@@ -192,12 +198,12 @@ export default function Navigation({ dict }: { dict: any }) {
                                 <Link
                                     href="/contact"
                                     onClick={() => setIsOpen(false)}
-                                    className="w-full rounded-lg bg-primary text-on-primary text-[1.35rem] font-headline font-bold py-3 text-center shadow-[0_12px_24px_rgba(0,71,133,0.25)]"
+                                    className="w-full rounded-lg bg-tertiary text-on-tertiary text-[1.35rem] font-headline font-bold py-3 text-center shadow-[0_12px_24px_rgba(107,95,0,0.25)]"
                                 >
                                     {dict.contact}
                                 </Link>
                                 <div className="flex items-center justify-between px-2">
-                                    <span className="text-[11px] text-on-surface-variant uppercase tracking-widest">Controls</span>
+                                    <span className="text-[11px] text-on-surface-variant uppercase tracking-widest">{dict.controls ?? "Controls"}</span>
                                     <div className="flex gap-3">
                                         <ThemeToggle />
                                         <LanguageToggle />

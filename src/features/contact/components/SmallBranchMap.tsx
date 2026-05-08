@@ -15,23 +15,9 @@ const BRANCHES: MarkerItem[] = [
     {
         key: "hq",
         label: "المقر الرئيسي - الرياض",
-        sublabel: "Riyadh HQ",
+        sublabel: "P.O. Box 16058, Riyadh 13245",
         position: [24.75944, 46.73291],
         color: "#6b5f00",
-    },
-    {
-        key: "jeddah",
-        label: "فرع جدة",
-        sublabel: "Jeddah Branch",
-        position: [21.54333, 39.17278],
-        color: "#004785",
-    },
-    {
-        key: "jubail",
-        label: "الجبيل الصناعية",
-        sublabel: "Jubail Industrial",
-        position: [27.0174, 49.6225],
-        color: "#2f6f4f",
     },
 ];
 
@@ -72,8 +58,8 @@ export function SmallBranchMap() {
     return (
         <div dir="ltr" className="h-full w-full">
             <MapContainer
-                center={[24.7, 45.6]}
-                zoom={5}
+                center={[24.75944, 46.73291]}
+                zoom={11}
                 zoomControl={false}
                 scrollWheelZoom={false}
                 className="h-full w-full"

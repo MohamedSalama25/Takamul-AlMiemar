@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 export default function PortfolioCTA({ dict }: { dict: any }) {
     return (
@@ -12,9 +13,12 @@ export default function PortfolioCTA({ dict }: { dict: any }) {
                 <p className="text-on-surface-variant text-lg mb-12 max-w-xl mx-auto opacity-90 leading-relaxed">
                     {dict.subtitle}
                 </p>
-                <button className="bg-tertiary text-on-tertiary px-10 py-5 font-bold uppercase tracking-widest rounded-sm hover:bg-tertiary/90 transition-all shadow-[0_0_30px_rgba(234,195,74,0.3)] active:scale-95 text-xs">
+                <Link
+                    href="/contact"
+                    className="inline-flex bg-tertiary text-on-tertiary px-10 py-5 font-bold uppercase tracking-widest rounded-sm hover:bg-tertiary/90 transition-all shadow-[0_0_30px_rgba(234,195,74,0.3)] active:scale-95 text-xs"
+                >
                     {dict.button}
-                </button>
+                </Link>
             </div>
             {/* Background elements */}
             <div className="absolute bottom-0 right-0 w-1/3 h-full bg-tertiary/5 skew-x-12 transform translate-x-20"></div>

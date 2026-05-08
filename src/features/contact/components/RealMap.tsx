@@ -69,6 +69,8 @@ export function RealMap({ info }: { info: any }) {
                                     >
                                         <p className="font-bold text-primary">{info.hq}</p>
                                         <p className="mt-1 leading-relaxed text-on-surface-variant">{info.hqAddress}</p>
+                                        <p className="mt-2 text-on-surface-variant" dir="ltr">{info.phoneMain}</p>
+                                        <p className="text-on-surface-variant" dir="ltr">{info.emailValue}</p>
                                     </div>
                                 </Tooltip>
                             </Marker>

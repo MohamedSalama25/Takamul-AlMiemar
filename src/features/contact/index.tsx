@@ -9,10 +9,11 @@ import ContactDetails from "./components/ContactDetails";
 
 export default function ContactView({ dictionary }: { dictionary: any }) {
     const dict = dictionary.contactPage;
+    const dir = (dictionary.common?.dir as "rtl" | "ltr") ?? "rtl";
 
     return (
         <main className="min-h-screen bg-background text-on-background selection:bg-tertiary/30 overflow-x-hidden">
-            <Navigation dict={dictionary.nav} />
+            <Navigation dict={dictionary.nav} dir={dir} />
             <ContactHero dict={dict.hero} />
 
             <section className="relative z-20 mx-auto -mt-28 max-w-7xl px-6 pb-16 md:-mt-32 md:px-8">
@@ -20,7 +21,7 @@ export default function ContactView({ dictionary }: { dictionary: any }) {
                     <ContactForm dict={dict.form} />
                     <ContactDetails
                         info={dict.info}
-                        hubs={dict.hubs}
+                        dir={dir}
                     />
                 </div>
             </section>

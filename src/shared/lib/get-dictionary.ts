@@ -8,5 +8,14 @@ const dictionaries = {
 export const getDictionary = async () => {
     const cookieStore = await cookies();
     const lang = (cookieStore.get("NEXT_LOCALE")?.value as "ar" | "en") || "ar";
-    return dictionaries[lang]();
+    const dictionary = await dictionaries[lang]();
+    const dir = lang === "ar" ? "rtl" : "ltr";
+
+    return {
+        ...dictionary,
+        common: {
+            lang,
+            dir,
+        },
+    };
 };

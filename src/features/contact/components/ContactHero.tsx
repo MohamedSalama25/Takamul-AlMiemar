@@ -17,8 +17,8 @@ export default function ContactHero({ dict }: { dict: any }) {
                 />
             </div>
             <div className="relative z-10 text-center px-4">
-                <div className="inline-block py-1.5 px-5 mb-6 rounded-sm border border-primary/35 bg-background/75 backdrop-blur-md shadow-lg shadow-black/20">
-                    <span className="font-label text-primary text-[0.75rem] tracking-[0.28em] uppercase font-semibold">{dict.badge}</span>
+                <div className="inline-block py-1.5 px-5 mb-6 rounded-sm border border-tertiary/50 bg-background/75 backdrop-blur-md shadow-lg shadow-black/20">
+                    <span className="font-label text-tertiary text-[0.75rem] tracking-[0.28em] uppercase font-semibold">{dict.badge}</span>
                 </div>
                 <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tighter drop-shadow-[0_6px_28px_rgba(0,0,0,0.45)]">
                     {dict.title}

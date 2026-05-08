@@ -6,15 +6,15 @@ import Image from "next/image";
 export default function IntegrationBanner({ dict }: { dict: any }) {
     return (
         <section className="py-24 bg-surface-variant text-on-background overflow-hidden relative">
-            <div className="absolute inset-y-0 ltr:right-0 rtl:left-0 w-full lg:w-1/2 opacity-20 md:opacity-40 pointer-events-none">
+            <div className="absolute inset-y-0 ltr:right-0 rtl:left-0 w-full lg:w-1/2 opacity-45 md:opacity-70 pointer-events-none">
                 <Image
                     fill
                     alt="Turnkey Project"
-                    className="object-cover mix-blend-overlay grayscale contrast-125"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1jCdgQcBBtdKFcTf46sWQ-dy3X0TYR9j-Xr4JlcUDMricXf4UAqQJuEvTxdqIVLkMpGVzieFv0tAuBcy9Vu7tSio86KDOrJx4CajYscOYVDKi1yqjJstpAID-1PAHXgoxXTZoeuuZt9aETkOxnNIA6__AeIRZtWG0CIbr8Bd64YjIh9EOXWzE6WEPPXfG8RtwNpprk47585V7-mZ6WPs5t0LQO8yjMuTQqKbK8UfCQ8Lcu04fdgxeE6RQS7Fo8yuK0pM5bKtz4JNm"
+                    className="object-cover saturate-110 contrast-110"
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1800&auto=format&fit=crop"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 ltr:bg-gradient-to-l rtl:bg-gradient-to-r from-transparent to-surface-variant"></div>
+                <div className="absolute inset-0 ltr:bg-gradient-to-l rtl:bg-gradient-to-r from-transparent via-surface-variant/45 to-surface-variant"></div>
             </div>
             <div className="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center min-h-[500px]">
                 <div className="relative">

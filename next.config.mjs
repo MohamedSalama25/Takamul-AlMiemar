@@ -12,6 +12,15 @@ const nextConfig = {
             },
         ],
     },
+    async redirects() {
+        return [
+            {
+                source: "/webmail",
+                destination: "https://business134.web-hosting.com:2096/",
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;

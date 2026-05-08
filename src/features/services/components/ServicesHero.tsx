@@ -10,8 +10,8 @@ export default function ServicesHero({ dict }: { dict: any }) {
                 <Image
                     fill
                     alt="Architectural Blueprint"
-                    className="object-cover opacity-100 dark:opacity-10"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPRaLZuL8r1vg1V92fa-3i3yiu8MO1YxOIZFvpLE5wQ6JFSsBip4VS9QnOLILIHqmwQGsY4oiz2sC_D4otu8nJiRPSG8LEzIlmmtejYjONVLDmLdu35ILMxrnHMPOGO_6CyS1DrDKotM22_Dk96eh4xos1isg4qL4nCxY4enoS0NF9V1O8UsyZKqrXqxwTTOh2Npz3QmkkFfEsQ9T9orr01be1C8Q2ayS0tLgsgFrqkyPCSPjiZ2Ps7WjCSziT20ayh0sZZkVneqb9"
+                    className="object-cover opacity-100"
+                    src="/services/hero.png"
                     priority
                 />
                 <div
@@ -20,17 +20,12 @@ export default function ServicesHero({ dict }: { dict: any }) {
                 />
             </div>
             <div className="relative z-10 max-w-screen-xl mx-auto px-8 text-center">
-                <div className="inline-flex items-center gap-4 mb-8">
-                    <span className="h-px w-12 bg-tertiary/40"></span>
-                    <h2 className="uppercase tracking-[0.2em] text-tertiary font-semibold text-xs font-label">
-                        {dict.badge}
-                    </h2>
-                    <span className="h-px w-12 bg-tertiary/40"></span>
-                </div>
-                <h1 className="text-5xl md:text-7xl font-bold text-on-background tracking-tight leading-[1.1] mb-8 max-w-4xl mx-auto gold-shimmer">
-                    {dict.title} <br /> <span className="text-tertiary">{dict.titleAccent}</span>
+                <h1 className="text-4xl md:text-6xl font-bold text-on-background tracking-tight leading-[1.1] mb-8 max-w-4xl mx-auto gold-shimmer">
+                    <span className="text-white drop-shadow-[0_8px_28px_rgba(0,0,0,0.55)]">{dict.title}</span>
+                    <br />
+                    <span className="text-tertiary drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]">{dict.titleAccent}</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-on-surface-variant font-light max-w-3xl mx-auto leading-relaxed">
+                <p className="text-xl md:text-2xl text-white/92 font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-[0_4px_16px_rgba(0,0,0,0.5)]">
                     {dict.description}
                 </p>
             </div>

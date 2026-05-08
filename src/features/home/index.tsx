@@ -10,19 +10,21 @@ import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 
 export default function HomeView({ dictionary }: { dictionary: any }) {
-    const isRtl = dictionary.common?.direction === "rtl" || true;
+    const dir = (dictionary.common?.dir as "rtl" | "ltr") ?? "rtl";
+    const isRtl = dir === "rtl";
 
     return (
         <main className="bg-background text-on-background font-body selection:bg-tertiary selection:text-on-tertiary min-h-screen">
-            <Navigation dict={dictionary.nav} />
+            <Navigation dict={dictionary.nav} dir={dir} />
             <Hero dict={dictionary.hero} />
-            <About dict={dictionary.about} />
-            <AdvancedServices dict={dictionary.professionalServices} isRtl={isRtl} />
-            <Projects dict={dictionary.projects} />
             <Statistics dict={dictionary.statistics} />
-            <Clients dict={dictionary.clients} />
-            <Certifications dict={dictionary.certifications} />
-            <Contact dict={dictionary.contact} />
+            <About dict={dictionary.about} isRtl={isRtl} />
+            <AdvancedServices dict={dictionary.professionalServices} isRtl={isRtl} />
+            <Projects section={dictionary.projects} projects={dictionary.portfolioPage?.projects ?? []} isRtl={isRtl} />
+            
+            <Clients dict={dictionary.clients} isRtl={isRtl} />
+            <Certifications dict={dictionary.certifications} isRtl={isRtl} />
+            <Contact dict={dictionary.contact} isRtl={isRtl} />
             <Footer dict={dictionary.footer} />
         </main>
     );

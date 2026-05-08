@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function About({ dict }: { dict: any }) {
+export default function About({ dict, isRtl = true }: { dict: any; isRtl?: boolean }) {
     return (
         <section id="about" className="relative overflow-hidden bg-surface py-24 px-6 md:px-14 lg:px-20">
             <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-primary/10 blur-3xl" aria-hidden />
@@ -29,7 +29,7 @@ export default function About({ dict }: { dict: any }) {
                             fill
                             className="object-cover transition-transform duration-700 hover:scale-105"
                             alt="construction site with engineers reviewing blueprints"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Yl3IzLKhgtg83nO2eg8zPFLP4HIrVty05xjShRGy5HdkusSB1CLhIQcaxyLqsmVNmnWEQeOIrh4R_CEZrnb5asEWNowpDZjRdThRpSgWka_hfDbIpKp8S-BaIQwOsxWjgJeVFcmnAIxI2S9pykxrDMlGSr81n2yocOv9kgzbs4hAfZ7USPuu-MEbvb53_4i7zb80EBmAhfx_BAMIGoWBux4L4oALxtykgkOeIE9QGtVJikZ6PcoaZdiQnW_XXuNoGBLXHU17qh8q"
+                            src="/home/solutions.jpg"
                             sizes="(max-width: 1024px) 100vw, 48vw"
                         />
                     </div>
@@ -45,7 +45,7 @@ export default function About({ dict }: { dict: any }) {
                     <h2 className="font-headline text-4xl font-bold leading-tight text-on-surface md:text-5xl">
                         {dict.title}
                     </h2>
-                    <div className="h-1 w-32 md:w-48 rounded-full bg-gradient-to-l from-tertiary to-transparent" aria-hidden />
+                    <div className={`h-1 w-32 md:w-48 rounded-full ${isRtl ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-tertiary to-transparent`} aria-hidden />
                     <div className="space-y-5 text-base leading-relaxed text-on-surface-variant md:text-lg">
                         <p>{dict.p1} <span className="text-tertiary font-semibold">{dict.p1Bold}</span>{dict.p1Rest}</p>
                         <p>{dict.p2}</p>

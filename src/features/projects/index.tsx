@@ -9,14 +9,15 @@ import PortfolioCTA from "./components/PortfolioCTA";
 
 export default function ProjectsView({ dictionary }: { dictionary: any }) {
     const dict = dictionary.portfolioPage;
+    const dir = (dictionary.common?.dir as "rtl" | "ltr") ?? "rtl";
 
     return (
         <main className="min-h-screen bg-background text-on-background selection:bg-tertiary/30">
-            <Navigation dict={dictionary.nav} />
+            <Navigation dict={dictionary.nav} dir={dir} />
             <PortfolioHero dict={dict.hero} />
             <PortfolioGrid
                 projects={dict.projects}
-                filters={dict.filters}
+                dir={dir}
             />
             <PortfolioCTA dict={dict.cta} />
             <Footer dict={dictionary.footer} />

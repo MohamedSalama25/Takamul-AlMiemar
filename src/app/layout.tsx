@@ -3,6 +3,8 @@ import { Inter, Manrope, Cairo } from "next/font/google";
 import { cookies } from "next/headers";
 import "@/shared/styles/globals.css";
 import { ThemeProvider } from "@/shared/components/layout/ThemeProvider";
+import WhatsAppFab from "@/shared/components/layout/WhatsAppFab";
+import BfcacheGuard from "@/shared/components/layout/BfcacheGuard";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -32,7 +34,9 @@ export default async function RootLayout({
                 suppressHydrationWarning
             >
                 <ThemeProvider>
+                    <BfcacheGuard />
                     {children}
+                    <WhatsAppFab dir={dir} />
                 </ThemeProvider>
             </body>
         </html>

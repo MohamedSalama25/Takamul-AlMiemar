@@ -4,16 +4,16 @@ import React from "react";
 
 export default function PortfolioHero({ dict }: { dict: any }) {
     return (
-        <header className="relative px-8 py-24 md:py-32 max-w-screen-2xl mx-auto flex flex-col items-center text-center overflow-hidden">
+        <header className="relative mt-8 md:mt-0 px-6 md:px-8 py-20 md:py-32 max-w-screen-2xl mx-auto flex flex-col items-center text-center overflow-hidden">
             <div className="z-10">
                 <span className="text-tertiary font-bold tracking-[0.3em] uppercase mb-6 block font-label text-xs">
                     {dict.badge}
                 </span>
-                <h1 className="text-5xl md:text-7xl font-black text-on-background leading-tight mb-6 tracking-tighter font-headline">
+                <h1 className="text-4xl md:text-7xl font-black text-on-background leading-tight mb-5 tracking-tighter font-headline">
                     {dict.title} <br className="hidden md:block" />
-                    <span className="text-tertiary">/ {dict.subtitle}</span>
+                    <span className="text-tertiary"><span className="md:hidden">/ </span>{dict.subtitle}</span>
                 </h1>
-                <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto font-light leading-relaxed">
+                <p className="text-base md:text-xl text-on-surface-variant max-w-xl md:max-w-2xl mx-auto font-light leading-relaxed">
                     {dict.description}
                 </p>
                 <div className="mt-12 w-24 h-0.5 bg-tertiary mx-auto"></div>

@@ -1,8 +1,41 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
+import { submitContactForm } from "@/shared/services/contact-form.service";
 
-export default function Contact({ dict }: { dict: any }) {
+export default function Contact({ dict, isRtl = true }: { dict: any; isRtl?: boolean }) {
+    const [form, setForm] = React.useState({
+        name: "",
+        email: "",
+        projectType: "",
+        message: "",
+    });
+    const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle");
+    const [feedback, setFeedback] = React.useState("");
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        setStatus("loading");
+        setFeedback("");
+
+        try {
+            await submitContactForm({
+                name: form.name,
+                email: form.email,
+                projectType: form.projectType,
+                message: form.message,
+                source: "home",
+            });
+            setStatus("success");
+            setFeedback(dict.successMessage ?? "Your request has been sent successfully.");
+            setForm({ name: "", email: "", projectType: "", message: "" });
+        } catch {
+            setStatus("error");
+            setFeedback(dict.errorMessage ?? "Unable to send your request right now.");
+        }
+    }
+
     return (
         <section id="contact" className="py-24 px-8 md:px-24 bg-surface relative overflow-hidden">
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-tertiary/5 rounded-full blur-[100px]"></div>
@@ -17,7 +50,7 @@ export default function Contact({ dict }: { dict: any }) {
                 >
                     <div>
                         <h2 className="font-headline text-5xl font-bold mb-6">{dict.title}</h2>
-                        <div className="mb-6 h-1 w-32 md:w-48 rounded-full bg-gradient-to-l from-tertiary to-transparent" aria-hidden />
+                        <div className={`mb-6 h-1 w-32 md:w-48 rounded-full ${isRtl ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-tertiary to-transparent`} aria-hidden />
                         <p className="text-on-surface-variant text-lg">{dict.desc}</p>
                     </div>
                     <div className="space-y-6">
@@ -52,25 +85,59 @@ export default function Contact({ dict }: { dict: any }) {
                     transition={{ duration: 0.8 }}
                     className="glass-panel p-10 relative border border-white/5"
                 >
-                    <form className="space-y-8">
+                    <form className="space-y-8" onSubmit={handleSubmit}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="relative group">
-                                <input className="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-4 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all text-on-surface placeholder:text-on-surface-variant/40" placeholder={dict.formName} type="text" />
+                                <input
+                                    required
+                                    className="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-4 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all text-on-surface placeholder:text-on-surface-variant/40"
+                                    placeholder={dict.formName}
+                                    type="text"
+                                    value={form.name}
+                                    onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
+                                />
                             </div>
                             <div className="relative group">
-                                <input className="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-4 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all text-on-surface placeholder:text-on-surface-variant/40" placeholder={dict.formEmail} type="email" />
+                                <input
+                                    required
+                                    className="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-4 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all text-on-surface placeholder:text-on-surface-variant/40"
+                                    placeholder={dict.formEmail}
+                                    type="email"
+                                    value={form.email}
+                                    onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
+                                />
                             </div>
                         </div>
                         <div className="relative group">
-                            <input className="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-4 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all text-on-surface placeholder:text-on-surface-variant/40" placeholder={dict.formType} type="text" />
+                            <input
+                                className="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-4 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all text-on-surface placeholder:text-on-surface-variant/40"
+                                placeholder={dict.formType}
+                                type="text"
+                                value={form.projectType}
+                                onChange={(e) => setForm((prev) => ({ ...prev, projectType: e.target.value }))}
+                            />
                         </div>
                         <div className="relative group">
-                            <textarea className="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-4 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all text-on-surface placeholder:text-on-surface-variant/40 resize-none" placeholder={dict.formMessage} rows={4}></textarea>
+                            <textarea
+                                required
+                                className="w-full bg-surface-container-lowest border-0 border-b-2 border-outline-variant/30 py-3 px-4 focus:ring-0 focus:border-tertiary focus:bg-surface-container-low transition-all text-on-surface placeholder:text-on-surface-variant/40 resize-none"
+                                placeholder={dict.formMessage}
+                                rows={4}
+                                value={form.message}
+                                onChange={(e) => setForm((prev) => ({ ...prev, message: e.target.value }))}
+                            ></textarea>
                         </div>
+                        {feedback ? (
+                            <p className={`text-sm ${status === "success" ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"}`}>
+                                {feedback}
+                            </p>
+                        ) : null}
                         <motion.button
+                            type="submit"
+                            disabled={status === "loading"}
                             whileHover={{ scale: 1.01 }}
                             whileTap={{ scale: 0.98 }}
-                            className="w-full py-5 bg-primary-container text-primary border-l-4 border-tertiary font-bold tracking-widest uppercase hover:bg-tertiary hover:text-on-tertiary transition-all shadow-lg shadow-tertiary/10"
+                            className="w-full py-5 bg-primary-container text-primary border-l-4 border-tertiary font-bold tracking-widest uppercase hover:bg-tertiary hover:text-on-tertiary transition-all shadow-lg shadow-tertiary/10 disabled:opacity-70 disabled:cursor-not-allowed"
                         >
                             {dict.formSubmit}
                         </motion.button>

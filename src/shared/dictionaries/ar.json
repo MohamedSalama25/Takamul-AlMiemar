@@ -1,18 +1,21 @@
 {
     "nav": {
         "title": "تكامل المعمار",
+        "home": "الرئيسية",
         "about": "عن الشركة",
         "services": "خدماتنا",
         "projects": "المشاريع",
         "clients": "العملاء",
-        "contact": "اتصل بنا"
+        "contact": "اتصل بنا",
+        "menu": "القائمة",
+        "controls": "الإعدادات"
     },
     "hero": {
         "subtitle": "شركة تكامل المعمار للمقاولات",
         "title1": "نشكل الأحلام.",
         "title2": "نبني الواقع.",
         "title3": "دقة هندسية.",
-        "description": "شركة رائدة في قطاع المقاولات، تأسست عام 2010، مكرسة للتميز من خلال اعتماد أحدث التقنيات والالتزام بأعلى معايير الجودة في جميع أنحاء المملكة.",
+        "description": "شركة مقاولات رائدة تقدم حلولاً هندسية متكاملة بأحدث التقنيات وبأعلى معايير الجودة في جميع أنحاء المملكة.",
         "ctaProjects": "عرض المشاريع",
         "ctaContact": "اتصل بنا"
     },
@@ -127,8 +130,8 @@
         "hero": {
             "badge": "معرض الأعمال",
             "title": "معرض مشاريعنا",
-            "subtitle": "عمارة النزاهة، وهندسة التميز",
-            "description": "نستعرض هنا مجموعة من المشاريع التي تعكس التزامنا بالدقة الهندسة والجمال المعماري"
+            "subtitle": "تميز هندسي",
+            "description": "مجموعة مختارة من مشاريعنا المنفذة بدقة وجودة عالية."
         },
         "filters": {
             "all": "الكل",
@@ -138,136 +141,104 @@
             "residential": "سكني"
         },
         "cta": {
-            "title": "لنصنع تحفتك القادمة",
-            "subtitle": "اشترك معنا لتحويل رؤيتك إلى واقع معماري مبني بدقة ونزاهة.",
-            "button": "ابدأ استشارتك الآن"
+            "title": "ابدأ مشروعك اليوم",
+            "subtitle": "شارك متطلباتك مع فريقنا واحصل على خطة تنفيذ تناسب مشروعك.",
+            "button": "ابدأ مشروعك الآن"
         },
         "projects": [
             {
-                "title": "مصنع الراشد الخشبي - رابغ",
-                "category": "صناعي",
-                "location": "رابغ، المملكة",
-                "image": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2000&auto=format&fit=crop"
-            },
-            {
-                "title": "محطة رابغ 1200 ميجاواط CCPP",
-                "category": "إلكتروميكانيك",
-                "location": "رابغ، المملكة",
-                "image": "https://images.unsplash.com/photo-1473876637968-47e6f3d449e7?q=80&w=2000&auto=format&fit=crop"
-            },
-            {
-                "title": "مصنع عبوات محمود سعيد",
-                "category": "صناعي",
-                "location": "جدة، المملكة",
-                "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop"
+                "title": "مشروع المكتبة الرئيسية - جامعة نايف الأمنية",
+                "description": "وفق نطاق العمل المتفق عليه وظروف الموقع، نفذ فريقنا المشروع بخبرة فنية وإدارة احترافية وجودة تنفيذ عالية.",
+                "images": [
+                    "/projects/main-library/1.jpg",
+                    "/projects/main-library/2.jpg",
+                    "/projects/main-library/3.jpg",
+                    "/projects/main-library/4.jpg",
+                    "/projects/main-library/5.jpg"
+                ]
             },
             {
                 "title": "مستشفى الملك خالد",
-                "category": "تجاري",
-                "location": "الرياض، المملكة",
-                "image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce2?q=80&w=2000&auto=format&fit=crop"
+                "description": "تنفيذ مشروع مستشفى الملك خالد في الرياض بإشراف فني متكامل وإدارة مشروع منضبطة وتسليم احترافي.",
+                "images": [
+                    "/projects/king-khaled-hospital/1.jpg",
+                    "/projects/king-khaled-hospital/2.jpg",
+                    "/projects/king-khaled-hospital/3.jpg",
+                    "/projects/king-khaled-hospital/4.jpg",
+                    "/projects/king-khaled-hospital/5.jpg"
+                ]
             },
             {
-                "title": "مشروع المكتبة الرئيسية - جامعة نايف",
-                "category": "تجاري",
-                "location": "الرياض، المملكة",
-                "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2000&auto=format&fit=crop"
+                "title": "هيئة الترفيه - الرياض",
+                "description": "نفذ فريقنا نطاق المشروع بجودة عالية وتنسيق فني دقيق وتسليم احترافي ضمن الجدول الزمني المحدد.",
+                "images": [
+                    "/projects/riyadh-entertainment/1.jpg",
+                    "/projects/riyadh-entertainment/2.jpg",
+                    "/projects/riyadh-entertainment/3.jpg",
+                    "/projects/riyadh-entertainment/4.jpg",
+                    "/projects/riyadh-entertainment/5.jpg"
+                ]
             },
             {
-                "title": "مركز الملك سلمان للمعارض",
-                "category": "تجاري",
-                "location": "الرياض، المملكة",
-                "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2000&auto=format&fit=crop"
+                "title": "مركز الملك سلمان للمعارض - الرياض",
+                "description": "مشروع تصميم وتنفيذ تم إنجازه بتحكم فني عالي وإدارة احترافية وجودة تنفيذ موثوقة في الموقع.",
+                "images": [
+                    "/projects/king-salman-centre/1.jpg",
+                    "/projects/king-salman-centre/2.jpg",
+                    "/projects/king-salman-centre/3.jpg",
+                    "/projects/king-salman-centre/4.jpg",
+                    "/projects/king-salman-centre/5.jpg"
+                ]
+            },
+            {
+                "title": "مشاريع خاصة ومحلات تجارية - الرياض",
+                "description": "تنفيذ العديد من المشاريع الخاصة والمحلات التجارية في الرياض عبر فريق منسق يركز على الجودة والالتزام بالوقت.",
+                "images": [
+                    "/projects/private-commercial-riyadh/1.jpg",
+                    "/projects/private-commercial-riyadh/2.jpg",
+                    "/projects/private-commercial-riyadh/3.jpg",
+                    "/projects/private-commercial-riyadh/4.jpg",
+                    "/projects/private-commercial-riyadh/5.jpg"
+                ]
             }
         ]
     },
     "aboutPage": {
-        "hero": {
-            "badge": "منذ ٢٠١٠",
-            "title": "مهندسو السلامة الهيكلية",
-            "subtitle": "تكامل المعمار: رواد الهندسة والإنشاءات منذ ٢٠١٠، نصنع مستقبل البنية التحتية بأعلى معايير الدقة والجودة."
+        "integration": {
+            "title": "عن التكامل",
+            "description": "تقدم مشاريع تكامل للاستشارات المهنية مجموعة من الخدمات تشمل إدارة المشاريع والاستشارات الهندسية والإدارية والمالية. وتتميز بحلول إبداعية وفريدة عبر دمج الخبرة التقنية مع المهارات الإدارية وروح الابتكار.",
+            "cta": "الملف التعريفي للشركة",
+            "ctaAriaLabel": "الملف التعريفي للشركة"
         },
-        "story": {
-            "badge": "الإرث",
-            "title": "قصتنا",
-            "p1": "تأسست في عام 2010، بدأت تكامل المعمار برؤية واحدة: التميز في التكنولوجيا والجودة في قطاع المقاولات.",
-            "p2": "منذ انطلاقتها، نجحت الشركة في بناء سمعة قوية من خلال تقديم حلول هندسية متطورة والالتزام بأعلى المعايير، مما جعلها شريكاً موثوقاً في تطوير البنية التحتية.",
-            "timeline": [
-                {
-                    "year": "2010",
-                    "title": "التأسيس",
-                    "desc": "تأسست كشركة استشارات هندسية متخصصة مع التركيز على السلامة الهيكلية عالية الدقة والمشاريع المعمارية المتميزة."
-                },
-                {
-                    "year": "2015",
-                    "title": "نطاق واسع",
-                    "desc": "انتقلت إلى مقاولات EPC الكاملة، وحصلت على مشاريع بنية تحتية حكومية بارزة في جميع أنحاء المملكة."
-                },
-                {
-                    "year": "2024",
-                    "title": "معيار عالمي",
-                    "desc": "معترف بها كشركة هندسية بمليارات الريالات رائدة في الابتكار والسلامة وممارسات البناء المستدامة."
-                }
-            ]
-        },
-        "mission": {
-            "badge": "المهمة",
-            "title": "شريك البناء مدى الحياة",
-            "accent": "نهدف إلى تقديم ليس فقط أفضل الأسعار، ولكن أيضاً أفضل المواد وخدمة العملاء، مع بناء علاقات طويلة الأمد وتدريب مستمر لطواقمنا.",
-            "desc": "تقديم مشاريع عالية الجودة من قبل فريق محترف يضع نصب عينيه الوصول إلى أفضل النتائج في جميع مراحل المشروع."
-        },
-        "vision": {
-            "badge": "الرؤية",
-            "title": "الريادة والتميز",
-            "desc": "تطبيق خبراتنا وقيمنا الموجهة نحو النمو في جميع المجالات لنرسخ مكانتنا كخبراء، ونقدم هندسة متفوقة لعملائنا."
-        },
-        "values": {
-            "badge": "هويتنا",
-            "title": "قيمنا الجوهرية",
+        "certificates": {
+            "title": "الشهادات",
+            "subtitle": "شهادات الجودة والسلامة والامتثال التي تعكس معاييرنا في التنفيذ والاعتماد.",
             "items": [
                 {
-                    "icon": "handshake",
-                    "title": "رضا العملاء",
-                    "subtitle": "Customer Satisfaction",
-                    "desc": "أولويتنا القصوى واهتمامنا الأول هو رضا العميل التام."
+                    "title": "ISO 9001:2015",
+                    "image": "/certificates/1.png"
                 },
                 {
-                    "icon": "verified",
-                    "title": "المصداقية",
-                    "subtitle": "Credibility",
-                    "desc": "نلتزم بالشفافية والوضوح والأمانة في جميع تعاملاتنا."
+                    "title": "ISO 45001:2018",
+                    "image": "/certificates/2.png"
                 },
                 {
-                    "icon": "lightbulb",
-                    "title": "الابتكار",
-                    "subtitle": "Innovation",
-                    "desc": "الابتكار والإبداع وسرعة الأداء في تنفيذ المشاريع."
+                    "title": "ISO 14001:2015",
+                    "image": "/certificates/3.png"
                 },
                 {
-                    "icon": "health_and_safety",
-                    "title": "السلامة",
-                    "subtitle": "Health & Safety",
-                    "desc": "نعمل بأمان ومكرسون لضمان صحة وسلامة موظفينا."
+                    "title": "شهادة بلدي",
+                    "image": "/certificates/4.png"
+                },
+                {
+                    "title": "ملحق شهادة بلدي - الصفحة الأولى",
+                    "image": "/certificates/5.png"
+                },
+                {
+                    "title": "ملحق شهادة بلدي - الصفحة الثانية",
+                    "image": "/certificates/6.png"
                 }
             ]
-        },
-        "leadership": {
-            "badge": "الإدارة",
-            "title": "القيادة التنفيذية",
-            "subtitle": "فريقنا المتخصص والقيادي",
-            "members": [
-                {
-                    "name": "سعد خلف العنزي",
-                    "enName": "Saad Khalaf Al-Anzi",
-                    "role": "المالك والمدير العام",
-                    "enRole": "Owner & General Manager",
-                    "experience": "أكثر من 20 عاماً",
-                    "enExperience": "20+ Years Experience",
-                    "desc": "سعد خلف العنزي، مؤسس ومدير عام شركة تكامل المعمار للمقاولات. قاد الشركة برؤية طموحة منذ عام 2010 لتصبح رائدة في قطاع الإنشاءات والهندسة بالمملكة، معتمداً على استراتيجيات الابتكار والتميز في التنفيذ."
-                }
-            ],
-            "experienceLabel": "الخبرة التقنية",
-            "legacyLabel": "الإرث الهندسي"
         }
     },
     "contactPage": {
@@ -298,14 +269,20 @@
             ],
             "message": "الموجز الفني",
             "messagePlaceholder": "قدم نظرة عامة شاملة لمتطلباتك...",
-            "submit": "إرسال طلب الاستشارة"
+            "submit": "إرسال طلب الاستشارة",
+            "successMessage": "تم إرسال طلبك بنجاح.",
+            "errorMessage": "تعذر إرسال الطلب حالياً، حاول مرة أخرى."
         },
         "info": {
             "hq": "المقر الرئيسي",
-            "hqAddress": "7880 حي قرطبة، شارع الشيخ حسن بن حسين بن علي، الرياض 13245، المملكة العربية السعودية",
+            "hqAddress": "المملكة العربية السعودية، ص.ب 16058 الرياض 13245، حي قرطبة، شارع الحسن بن حسين بن علي، مبنى رقم 7880",
             "inquiries": "الاستفسارات والتواصل",
             "email": "البريد الإلكتروني",
-            "emailValue": "info@takamul.com.sa"
+            "emailValue": "info@takamulsaudi.com",
+            "phoneMain": "011 209 7048",
+            "phoneAlt1": "058 305 1777",
+            "phoneAlt2": "059 915 4100",
+            "website": "www.takamulsaudi.com"
         },
         "hubs": {
             "jeddah": "فرع جدة",
@@ -365,6 +342,7 @@
     "certifications": {
         "title": "معايير لا تقبل المساومة",
         "badge": "الجودة والسلامة",
+        "complianceRateLabel": "معدل الالتزام",
         "c1Badge": "ISO 9001:2015",
         "c1Desc": "أنظمة إدارة الجودة التي تصدق على التزامنا بالتميز التنظيمي ورضا العملاء.",
         "c2Badge": "ISO 45001:2018",
@@ -376,38 +354,42 @@
         "title": "ابدأ مشروعك المعلمي القادم",
         "desc": "ناقش متطلباتك الهندسية مع متخصصينا. نحن مستعدون لتنفيذ رؤيتك بدقة وتميز هيكلي.",
         "info1Title": "المقر الرئيسي",
-        "info1Desc": "7880 حي قرطبة، شارع الشيخ حسن بن حسين بن علي، الرياض 13245، المملكة العربية السعودية",
+        "info1Desc": "المملكة العربية السعودية، ص.ب 16058 الرياض 13245، حي قرطبة، شارع الحسن بن حسين بن علي، مبنى رقم 7880",
         "info2Title": "استفسار مباشر",
-        "info2Desc": "+966 53 151 5110",
+        "info2Desc": "011 209 7048 / 058 305 1777 / 059 915 4100",
         "info3Title": "المراسلات الرقمية",
-        "info3Desc": "info@takamul.com.sa",
+        "info3Desc": "info@takamulsaudi.com - www.takamulsaudi.com",
         "formName": "الاسم الكامل",
         "formEmail": "عنوان البريد الإلكتروني",
         "formType": "نوع المشروع (مثلاً: MEP، صناعي، تشطيبات)",
         "formMessage": "وصف موجز لمتطلبات مشروعك",
-        "formSubmit": "طلب استشارة"
+        "formSubmit": "طلب استشارة",
+        "successMessage": "تم إرسال طلبك بنجاح.",
+        "errorMessage": "تعذر إرسال الطلب حالياً، حاول مرة أخرى."
     },
     "footer": {
         "title": "تكامل المعمار",
         "desc": "رائدة في تطور البناء في المملكة العربية السعودية بنزاهة وابتكار ودقة هندسية لا تضاهى.",
         "navTitle": "التنقل",
         "navLinks": [
+            "الرئيسية",
             "عن الشركة",
             "خدماتنا",
             "محفظة المشاريع",
-            "شهادات العملاء",
-            "وظائف"
+            "اتصل بنا"
         ],
         "resourcesTitle": "الموارد",
         "resourcesLinks": [
-            "سياسة الخصوصية",
-            "شروط الخدمة",
-            "المعايير الهندسية",
-            "مراقبة الجودة"
+            "الملف التعريفي",
+            "شهاداتنا",
+            "اتصل بنا",
+            "الموقع"
         ],
         "newsletterTitle": "النشرة الإخبارية",
-        "newsletterDesc": "Stay updated with our latest landmarks.",
+        "newsletterDesc": "اشترك ليصلك جديد مشاريعنا ومعالمنا الهندسية.",
         "newsletterPlaceholder": "البريد الإلكتروني",
+        "newsletterSuccess": "تم تسجيل اشتراكك بنجاح.",
+        "newsletterError": "تعذر تسجيل الاشتراك، حاول مرة أخرى.",
         "copyright": "© 2024 تكامل المعمار. التميز المعماري."
     },
     "professionalServices": {
@@ -423,11 +405,11 @@
                     "قباب تخصصية"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200",
-                    "https://images.unsplash.com/photo-1541888081198-6447c210459b?w=1200",
-                    "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200",
-                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200",
-                    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200"
+                    "/home/metals/domes/1.jpg",
+                    "/home/metals/domes/2.jpg",
+                    "/home/metals/domes/3.jpg",
+                    "/home/metals/domes/4.jpg",
+                    "/home/metals/domes/5.jpg"
                 ]
             },
             {
@@ -439,11 +421,11 @@
                     "حلول متينة"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1504307651254-35680f3366d4?w=1200",
-                    "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200",
-                    "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=1200",
-                    "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200",
-                    "https://images.unsplash.com/photo-1541888081198-6447c210459b?w=1200"
+                    "/home/metals/integrated/1.jpg",
+                    "/home/metals/integrated/2.jpg",
+                    "/home/metals/integrated/3.jpg",
+                    "/home/metals/integrated/4.png",
+                    "/home/metals/integrated/5.png"
                 ]
             },
             {
@@ -455,11 +437,11 @@
                     "تصاميم عصرية"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200",
-                    "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=1200",
-                    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200",
-                    "https://images.unsplash.com/photo-1504307651254-35680f3366d4?w=1200",
-                    "https://images.unsplash.com/photo-1581092920463-20ee60d32909?w=1200"
+                    "/home/metals/doors/1.jpg",
+                    "/home/metals/doors/2.jpg",
+                    "/home/metals/doors/3.jpg",
+                    "/home/metals/doors/4.jpg",
+                    "/home/metals/doors/5.jpg"
                 ]
             },
             {
@@ -471,11 +453,11 @@
                     "دمج هندسي"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?w=1200",
-                    "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=1200",
-                    "https://images.unsplash.com/photo-1520038410233-7141f0bc1b1c?w=1200",
-                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200",
-                    "https://images.unsplash.com/photo-1541888081198-6447c210459b?w=1200"
+                    "/home/metals/glass/1.jpg",
+                    "/home/metals/glass/2.jpg",
+                    "/home/metals/glass/3.jpg",
+                    "/home/metals/glass/4.jpg",
+                    "/home/metals/glass/5.jpg"
                 ]
             },
             {
@@ -487,11 +469,11 @@
                     "هندسة معقدة"
                 ],
                 "images": [
-                    "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200",
-                    "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=1200",
-                    "https://images.unsplash.com/photo-1504307651254-35680f3366d4?w=1200",
-                    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200",
-                    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200"
+                    "/home/metals/structures/1.jpg",
+                    "/home/metals/structures/2.jpg",
+                    "/home/metals/structures/3.jpg",
+                    "/home/metals/structures/4.jpg",
+                    "/home/metals/structures/5.jpg"
                 ]
             }
         ]

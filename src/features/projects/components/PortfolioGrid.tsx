@@ -1,73 +1,91 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
+import { cn } from "@/shared/lib/cn";
 
-export default function PortfolioGrid({ projects, filters }: { projects: any[], filters: any }) {
-    const [activeFilter, setActiveFilter] = useState("All");
+interface ProjectItem {
+    title: string;
+    description: string;
+    images: string[];
+}
 
-    const filterKeys = ["all", "industrial", "mep", "commercial", "residential"];
-    const filteredProjects = activeFilter === "All"
-        ? projects
-        : projects.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase() || (activeFilter === "MEP" && p.category === "إلكتروميكانيك"));
+export default function PortfolioGrid({ projects, dir }: { projects: ProjectItem[], dir: "rtl" | "ltr" }) {
+    const isRtl = dir === "rtl";
 
     return (
-        <section className="px-8 pb-32 max-w-screen-2xl mx-auto">
-            {/* Filter System */}
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 border-b border-on-surface-variant/10 pb-6 mb-16">
-                {filterKeys.map((key) => {
-                    const label = filters[key];
-                    const isActive = activeFilter === label || (key === "all" && activeFilter === "All");
-                    return (
-                        <button
-                            key={key}
-                            onClick={() => setActiveFilter(key === "all" ? "All" : label)}
-                            className={`text-xs uppercase tracking-widest font-bold pb-4 px-2 transition-all border-b-2 ${isActive ? "text-tertiary border-tertiary" : "text-on-surface-variant/40 border-transparent hover:text-tertiary"
-                                }`}
-                        >
-                            {label}
-                        </button>
-                    );
-                })}
-            </div>
+        <section className="px-4 md:px-8 pb-24 md:pb-32 max-w-screen-2xl mx-auto space-y-12 md:space-y-16">
+            {projects.map((project, index) => (
+                <article
+                    key={project.title}
+                    className="relative rounded-2xl border border-outline/30 bg-surface p-4 md:p-6 shadow-[0_20px_55px_rgba(0,0,0,0.1)]"
+                >
+                    <div className={cn("grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-5", isRtl && "lg:[direction:rtl]")}>
+                      
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-                {filteredProjects.map((project, index) => (
-                    <div
-                        key={index}
-                        className={`group cursor-pointer ${index % 2 !== 0 ? 'md:mt-24' : ''}`}
-                    >
-                        <div className="relative overflow-hidden glass-panel p-2 transition-all duration-500 mb-8 shadow-2xl rounded-sm border border-tertiary/10 group-hover:border-tertiary/40">
-                            <div className="relative aspect-[16/10] overflow-hidden">
-                                <Image
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                    src={project.image}
-                                    alt={project.title}
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                />
-                            </div>
-                            <div className="absolute top-6 left-6 bg-tertiary text-primary-container px-4 py-1 text-[10px] font-black uppercase tracking-widest shadow-lg">
-                                {project.category}
-                            </div>
-                        </div>
-                        <div className="flex justify-between items-start px-2">
-                            <div>
-                                <h3 className="text-2xl font-bold text-on-background mb-2 tracking-tight group-hover:text-tertiary transition-colors font-headline">
+                        <div className="lg:col-span-4">
+                            <div className={cn(
+                                "h-full min-h-[280px] rounded-xl bg-tertiary text-primary p-6 md:p-8 flex flex-col justify-center shadow-[0_18px_40px_rgba(0,0,0,0.2)]",
+                                !isRtl && index % 2 === 1 && "lg:mt-8"
+                            )}>
+                                <h3 className="text-2xl md:text-4xl font-headline font-black leading-tight tracking-tight mb-5 text-white">
                                     {project.title}
                                 </h3>
-                                <div className="flex items-center gap-2 text-tertiary/60">
-                                    <span className="material-symbols-outlined text-sm">location_on</span>
-                                    <span className="text-xs font-bold uppercase tracking-widest font-label">{project.location}</span>
-                                </div>
+                                <p className="text-base md:text-lg leading-relaxed text-white/95">
+                                    {project.description}
+                                </p>
                             </div>
-                            <span className="material-symbols-outlined text-tertiary/30 group-hover:text-tertiary transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1">
-                                arrow_outward
-                            </span>
+                        </div>
+                          <div className="lg:col-span-8 grid grid-cols-2 gap-4">
+                            <div className="col-span-2 relative overflow-hidden rounded-xl aspect-[16/8]">
+                                <Image
+                                    fill
+                                    className="object-cover"
+                                    src={project.images[0]}
+                                    alt={project.title}
+                                    sizes="(max-width: 1024px) 100vw, 66vw"
+                                />
+                            </div>
+                            <div className="col-span-1 relative overflow-hidden rounded-xl aspect-square">
+                                <Image
+                                    fill
+                                    className="object-cover"
+                                    src={project.images[1]}
+                                    alt={project.title}
+                                    sizes="(max-width: 1024px) 50vw, 33vw"
+                                />
+                            </div>
+                            <div className="col-span-1 relative overflow-hidden rounded-xl aspect-square">
+                                <Image
+                                    fill
+                                    className="object-cover"
+                                    src={project.images[2]}
+                                    alt={project.title}
+                                    sizes="(max-width: 1024px) 50vw, 33vw"
+                                />
+                            </div>
+                            <div className="col-span-1 relative overflow-hidden rounded-xl aspect-square">
+                                <Image
+                                    fill
+                                    className="object-cover"
+                                    src={project.images[3]}
+                                    alt={project.title}
+                                    sizes="(max-width: 1024px) 50vw, 33vw"
+                                />
+                            </div>
+                            <div className="col-span-1 relative overflow-hidden rounded-xl aspect-square">
+                                <Image
+                                    fill
+                                    className="object-cover"
+                                    src={project.images[4]}
+                                    alt={project.title}
+                                    sizes="(max-width: 1024px) 50vw, 33vw"
+                                />
+                            </div>
                         </div>
                     </div>
-                ))}
-            </div>
+                </article>
+            ))}
         </section>
     );
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero({ dict }: { dict: any }) {
     return (
@@ -17,12 +18,12 @@ export default function Hero({ dict }: { dict: any }) {
                         fill
                         className="object-cover dark:grayscale"
                         alt="cinematic architecture"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA75aWH2YjrrNPRLc9qvumaD5LYevuPRG-6tvHXFDx5USkWwYCo3NdB2yuGrDSEi9JyDaFuv7lA0N4A73lCf8ZXs0uMm9qIaMYRtzNaTXPo_XpHRzWmbxdPGO48NeQzI4mogZf3rfoj5Y8gd_fJci4eHueNdRTEXuAwg99OO_InkNQaYi2Tmn9MOW5y9DRy-NsbfE4MJfvf5_GZwVi4hxJYapV2exMF27Vp4diAYemTbnFmfZ3FI8sIrsiNEuqJzCUiGWRMU4Itap8d"
+                        src="/home/hero.jpg"
                         priority
                     />
                 </motion.div>
                 <div
-                    className="absolute inset-0 hidden bg-gradient-to-b from-black/55 via-black/32 to-black/60 dark:block"
+                    className="absolute inset-0 bg-gradient-to-b from-black/62 via-black/45 to-black/68 dark:from-black/70 dark:via-black/52 dark:to-black/76"
                     aria-hidden
                 />
             </div>
@@ -38,7 +39,7 @@ export default function Hero({ dict }: { dict: any }) {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, delay: 0.2 }}
-                            className="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.2] gold-shimmer"
+                            className="font-headline text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.2] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.6)]"
                         >
                             {dict.title1}<br />{dict.title2}<br />{dict.title3}
                         </motion.h1>
@@ -47,7 +48,7 @@ export default function Hero({ dict }: { dict: any }) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="max-w-3xl text-xl md:text-2xl font-medium leading-relaxed text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]"
+                        className="max-w-2xl text-lg md:text-xl font-medium leading-relaxed text-white/95 drop-shadow-[0_4px_14px_rgba(0,0,0,0.6)]"
                     >
                         {dict.description}
                     </motion.p>
@@ -57,12 +58,18 @@ export default function Hero({ dict }: { dict: any }) {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="flex flex-col sm:flex-row gap-4 mt-8"
                     >
-                        <button className="px-8 py-4 bg-primary-container text-primary border-l-2 border-tertiary font-semibold tracking-wider uppercase text-sm hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all active:scale-95">
+                        <Link
+                            href="/projects"
+                            className="px-8 py-4 bg-primary-container text-tertiary border-l-2 border-tertiary font-semibold tracking-wider uppercase text-sm hover:bg-tertiary hover:text-on-tertiary hover:shadow-[0_0_20px_rgba(212,175,55,0.25)] transition-all active:scale-95"
+                        >
                             {dict.ctaProjects}
-                        </button>
-                        <button className="px-8 py-4 bg-transparent border border-outline-variant text-on-surface font-semibold tracking-wider uppercase text-sm hover:bg-surface-variant transition-all active:scale-95">
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="px-8 py-4 bg-tertiary border border-tertiary text-on-tertiary font-semibold tracking-wider uppercase text-sm hover:bg-tertiary/90 hover:border-tertiary/90 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all active:scale-95"
+                        >
                             {dict.ctaContact}
-                        </button>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </div>
@@ -70,9 +77,9 @@ export default function Hero({ dict }: { dict: any }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.4 }}
                 transition={{ delay: 1.2 }}
-                className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce"
+                className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 animate-bounce"
             >
-                <span className="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
+                <span className="material-symbols-outlined text-4xl text-tertiary">keyboard_double_arrow_down</span>
             </motion.div>
         </section>
     );
