@@ -20,7 +20,6 @@ export async function POST(request: Request) {
             source: body.source,
             projectType: body.projectType,
             service: body.service,
-            region: body.region,
         });
 
         return NextResponse.json({ success: true, message: "Message sent successfully." });

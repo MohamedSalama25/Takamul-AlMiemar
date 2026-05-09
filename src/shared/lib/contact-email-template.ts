@@ -5,7 +5,6 @@ export interface ContactPayload {
     source: "home" | "contact-page";
     projectType?: string;
     service?: string;
-    region?: string;
 }
 
 const esc = (value: string) =>
@@ -22,7 +21,6 @@ export function buildContactEmailTemplate(payload: ContactPayload) {
     const source = payload.source === "home" ? "Home Page Form" : "Contact Page Form";
     const projectType = payload.projectType ? esc(payload.projectType) : "Not provided";
     const service = payload.service ? esc(payload.service) : "Not selected";
-    const region = payload.region ? esc(payload.region) : "Not selected";
     const message = esc(payload.message).replace(/\n/g, "<br/>");
 
     return `
@@ -39,7 +37,6 @@ export function buildContactEmailTemplate(payload: ContactPayload) {
                 <tr><td style="padding:10px 0; color:#6b7280;">Source</td><td style="padding:10px 0; color:#111827;">${source}</td></tr>
                 <tr><td style="padding:10px 0; color:#6b7280;">Project Type</td><td style="padding:10px 0; color:#111827;">${projectType}</td></tr>
                 <tr><td style="padding:10px 0; color:#6b7280;">Service</td><td style="padding:10px 0; color:#111827;">${service}</td></tr>
-                <tr><td style="padding:10px 0; color:#6b7280;">Region</td><td style="padding:10px 0; color:#111827;">${region}</td></tr>
               </table>
               <div style="margin-top:18px; padding:14px; border:1px solid #e5e7eb; border-radius:8px; background:#fafafa;">
                 <div style="font-size:12px; color:#6b7280; margin-bottom:8px;">Message</div>

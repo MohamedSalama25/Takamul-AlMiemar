@@ -8,7 +8,6 @@ export default function ContactForm({ dict }: { dict: any }) {
         name: "",
         email: "",
         service: "",
-        region: "",
         message: "",
     });
     const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle");
@@ -24,13 +23,12 @@ export default function ContactForm({ dict }: { dict: any }) {
                 name: form.name,
                 email: form.email,
                 service: form.service,
-                region: form.region,
                 message: form.message,
                 source: "contact-page",
             });
             setStatus("success");
             setFeedback(dict.successMessage ?? "Your message has been sent successfully.");
-            setForm({ name: "", email: "", service: "", region: "", message: "" });
+            setForm({ name: "", email: "", service: "", message: "" });
         } catch {
             setStatus("error");
             setFeedback(dict.errorMessage ?? "Failed to send message. Please try again.");
@@ -81,7 +79,7 @@ export default function ContactForm({ dict }: { dict: any }) {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-6">
                         <div className="relative">
                             <label className="mb-2 block font-label text-[0.65rem] uppercase tracking-widest text-tertiary">{dict.service}</label>
                             <select
@@ -90,18 +88,6 @@ export default function ContactForm({ dict }: { dict: any }) {
                                 onChange={(e) => setForm((prev) => ({ ...prev, service: e.target.value }))}
                             >
                                 {dict.serviceOptions.map((opt: string) => (
-                                    <option key={opt} className="bg-surface">{opt}</option>
-                                ))}
-                            </select>
-                        </div>
-                        <div className="relative">
-                            <label className="mb-2 block font-label text-[0.65rem] uppercase tracking-widest text-tertiary">{dict.region}</label>
-                            <select
-                                className="w-full cursor-pointer appearance-none rounded-sm border border-outline-variant/35 bg-background px-4 py-3 text-sm text-on-background transition-all duration-200 focus:border-primary focus:bg-surface focus:ring-2 focus:ring-primary/15 focus:outline-none dark:border-outline-variant/45 dark:bg-surface-container-high/85 dark:focus:bg-surface-container-highest"
-                                value={form.region}
-                                onChange={(e) => setForm((prev) => ({ ...prev, region: e.target.value }))}
-                            >
-                                {dict.regionOptions.map((opt: string) => (
                                     <option key={opt} className="bg-surface">{opt}</option>
                                 ))}
                             </select>
